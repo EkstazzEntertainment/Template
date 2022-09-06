@@ -15,7 +15,7 @@ namespace Editor.ProjectBuilder
             string[] levels = GetAllScenes();
             EditorUserBuildSettings.development = false;
             EditorUserBuildSettings.buildAppBundle = true;
-            BuildPipeline.BuildPlayer(levels, buildParams.checkoutPath + "/BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
+            BuildPipeline.BuildPlayer(levels, "/Users/yuriialeksanian/Desktop" + "/BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
         }
         
         [MenuItem("Build/iOS Build")]
