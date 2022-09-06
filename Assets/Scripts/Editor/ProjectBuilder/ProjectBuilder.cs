@@ -17,8 +17,9 @@ namespace Editor.ProjectBuilder
             PlayerSettings.applicationIdentifier = buildParams.id;
             PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, buildParams.id);
 
-            PlayerSettings.keyaliasPass = "keystore";
-            PlayerSettings.keystorePass = "keystore";
+            PlayerSettings.Android.keystoreName = buildParams.keystorePath;
+            PlayerSettings.keyaliasPass = buildParams.keystorePass;
+            PlayerSettings.keystorePass = buildParams.keystorePass;
  
             if (buildParams.development)
             {

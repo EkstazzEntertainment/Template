@@ -10,5 +10,7 @@ namespace App.DataBase.Structures
         public string platform;
         public bool development;
         public string checkoutPath;
+        public string keystorePath;
+        public string keystorePass;
     }
 }
