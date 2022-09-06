@@ -25,7 +25,7 @@ namespace Editor.ProjectBuilder
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = true;
-                BuildPipeline.BuildPlayer(levels, buildParams.checkoutPath + "Build/" + "BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels,"Build/" + "BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
             }
         }
         
