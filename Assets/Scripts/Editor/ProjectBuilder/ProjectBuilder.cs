@@ -22,12 +22,22 @@ namespace Editor.ProjectBuilder
  
             if (buildParams.development)
             {
+                BuildDevelopment();
+            }
+            else
+            {
+                BuildDevelopment();
+                BuildRelease();
+            }
+
+            void BuildDevelopment()
+            {
                 EditorUserBuildSettings.development = true;
                 EditorUserBuildSettings.buildAppBundle = false;
                 BuildPipeline.BuildPlayer(levels,$"Build/development/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.Development);
-
             }
-            else
+
+            void BuildRelease()
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = true;
