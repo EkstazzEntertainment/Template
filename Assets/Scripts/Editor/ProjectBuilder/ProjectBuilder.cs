@@ -17,9 +17,12 @@ namespace Editor.ProjectBuilder
             PlayerSettings.keyaliasPass = "keystorepass";
             PlayerSettings.keystorePass = "keystorepass";
 
-            if (!buildParams.development)
+            if (buildParams.development)
             {
-                
+                EditorUserBuildSettings.development = true;
+                EditorUserBuildSettings.buildAppBundle = false;
+                BuildPipeline.BuildPlayer(levels,"Build/" + "BuiltGame.apk", BuildTarget.Android, BuildOptions.Development);
+
             }
             else
             {
