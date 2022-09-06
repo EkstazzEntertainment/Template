@@ -11,7 +11,7 @@ namespace Editor.ProjectBuilder
         [MenuItem("Build/Android Build")]
         public static void BuildAndroid()
         {
-            GetParamsFile<BuildParams>(out var buildParams);
+            // GetParamsFile<BuildParams>(out var buildParams);
             string[] levels = GetAllScenes();
             EditorUserBuildSettings.development = false;
             EditorUserBuildSettings.buildAppBundle = true;
