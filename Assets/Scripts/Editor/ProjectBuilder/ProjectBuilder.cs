@@ -17,7 +17,7 @@ namespace Editor.ProjectBuilder
             PlayerSettings.keyaliasPass = "keystorepass";
             PlayerSettings.keystorePass = "keystorepass";
 
-            if (buildParams.development)
+            if (true)
             {
                 EditorUserBuildSettings.development = true;
                 EditorUserBuildSettings.buildAppBundle = false;
