@@ -15,6 +15,8 @@ namespace Editor.ProjectBuilder
             string[] levels = GetAllScenes();
             EditorUserBuildSettings.development = false;
             EditorUserBuildSettings.buildAppBundle = true;
+            PlayerSettings.keyaliasPass = "mutulioo";
+            PlayerSettings.keystorePass = "mutulioo";
             BuildPipeline.BuildPlayer(levels,  "BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
         }
         
