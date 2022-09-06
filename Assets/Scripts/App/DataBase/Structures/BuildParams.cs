@@ -8,7 +8,7 @@ namespace App.DataBase.Structures
         public string id;
         public string name;
         public string platform;
-        public bool development;
+        public string development;
         public string checkoutPath;
     }
 }
