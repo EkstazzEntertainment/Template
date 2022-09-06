@@ -14,9 +14,9 @@ namespace Editor.ProjectBuilder
             GetParamsFile<BuildParams>(out var buildParams);
             string[] levels = GetAllScenes();
             
-            PlayerSettings.keyaliasPass = "keystorepass";
-            PlayerSettings.keystorePass = "keystorepass";
-
+            PlayerSettings.keyaliasPass = "mutulioo";
+            PlayerSettings.keystorePass = "mutulioo";
+ 
             if (true)
             {
                 EditorUserBuildSettings.development = true;
