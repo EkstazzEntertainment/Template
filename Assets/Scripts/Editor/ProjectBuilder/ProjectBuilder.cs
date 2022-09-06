@@ -7,7 +7,7 @@ namespace Editor.ProjectBuilder
     using UnityEngine;
 
 
-    public class ProjectBuilder : MonoBehaviour
+    public class ProjectBuilder
     {
         [MenuItem("Build/Android Build")]
         public static void BuildAndroid()
