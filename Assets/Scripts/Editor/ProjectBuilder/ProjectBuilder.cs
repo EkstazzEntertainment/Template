@@ -21,14 +21,14 @@ namespace Editor.ProjectBuilder
             {
                 EditorUserBuildSettings.development = true;
                 EditorUserBuildSettings.buildAppBundle = false;
-                BuildPipeline.BuildPlayer(levels,"./Build/" + "BuiltGame", BuildTarget.Android, BuildOptions.Development);
+                BuildPipeline.BuildPlayer(levels,"BuiltGame", BuildTarget.Android, BuildOptions.Development);
 
             }
             else
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = true;
-                BuildPipeline.BuildPlayer(levels,"./Build/" + "BuiltGame", BuildTarget.Android, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels,"BuiltGame", BuildTarget.Android, BuildOptions.None);
             }
         }
         
