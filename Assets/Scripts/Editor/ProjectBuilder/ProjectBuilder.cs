@@ -11,13 +11,22 @@ namespace Editor.ProjectBuilder
         [MenuItem("Build/Android Build")]
         public static void BuildAndroid()
         {
-            // GetParamsFile<BuildParams>(out var buildParams);
+            GetParamsFile<BuildParams>(out var buildParams);
             string[] levels = GetAllScenes();
-            EditorUserBuildSettings.development = false;
-            EditorUserBuildSettings.buildAppBundle = true;
+            
             PlayerSettings.keyaliasPass = "keystorepass";
             PlayerSettings.keystorePass = "keystorepass";
-            BuildPipeline.BuildPlayer(levels,  "BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
+
+            if (buildParams.development)
+            {
+                
+            }
+            else
+            {
+                EditorUserBuildSettings.development = false;
+                EditorUserBuildSettings.buildAppBundle = true;
+                BuildPipeline.BuildPlayer(levels, buildParams.checkoutPath + "Build/" + "BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
+            }
         }
         
         [MenuItem("Build/iOS Build")]
