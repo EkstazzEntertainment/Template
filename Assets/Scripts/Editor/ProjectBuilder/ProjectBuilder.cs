@@ -13,7 +13,10 @@ namespace Editor.ProjectBuilder
         {
             GetParamsFile<BuildParams>(out var buildParams);
             string[] levels = GetAllScenes();
-            
+
+            PlayerSettings.applicationIdentifier = buildParams.id;
+            PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, buildParams.id);
+
             PlayerSettings.keyaliasPass = "keystore";
             PlayerSettings.keystorePass = "keystore";
  
@@ -21,14 +24,14 @@ namespace Editor.ProjectBuilder
             {
                 EditorUserBuildSettings.development = true;
                 EditorUserBuildSettings.buildAppBundle = false;
-                BuildPipeline.BuildPlayer(levels,$"Build/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.Development);
+                BuildPipeline.BuildPlayer(levels,$"Build/development/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.Development);
 
             }
             else
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = true;
-                BuildPipeline.BuildPlayer(levels,$"Build/{buildParams.name}.aab", BuildTarget.Android, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels,$"Build/release/{buildParams.name}.aab", BuildTarget.Android, BuildOptions.None);
             }
         }
         
