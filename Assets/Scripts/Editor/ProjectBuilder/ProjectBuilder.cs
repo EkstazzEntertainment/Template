@@ -4,7 +4,6 @@ namespace Editor.ProjectBuilder
     using App.DataBase;
     using App.DataBase.Structures;
     using UnityEditor;
-    using UnityEngine;
 
 
     public class ProjectBuilder
@@ -13,7 +12,6 @@ namespace Editor.ProjectBuilder
         public static void BuildAndroid()
         {
             GetParamsFile<BuildParams>(out var buildParams);
-            Debug.Log(buildParams.id + "  ---------------");
             string[] levels = GetAllScenes();
             EditorUserBuildSettings.development = false;
             EditorUserBuildSettings.buildAppBundle = true;
