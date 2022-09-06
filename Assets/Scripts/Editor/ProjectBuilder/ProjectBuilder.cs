@@ -17,7 +17,7 @@ namespace Editor.ProjectBuilder
             PlayerSettings.keyaliasPass = "keystorepass";
             PlayerSettings.keystorePass = "keystorepass";
 
-            if (buildParams.development)
+            if (!buildParams.development)
             {
                 
             }
