@@ -1,20 +1,24 @@
 namespace Editor.ProjectBuilder
 {
     using System.Collections.Generic;
+    using App.DataBase;
+    using App.DataBase.Structures;
     using UnityEditor;
     using UnityEngine;
 
 
+    [ExecuteInEditMode]
     public class ProjectBuilder : MonoBehaviour
     {
         [MenuItem("Build/Android Build")]
         public static void BuildAndroid()
         {
-            string path = EditorUtility.SaveFolderPanel("Choose Location of Built Game", "", "");
+            GetParamsFile<BuildParams>(out var buildParams);
+            Debug.Log(buildParams.id + "  ---------------");
             string[] levels = GetAllScenes();
             EditorUserBuildSettings.development = false;
             EditorUserBuildSettings.buildAppBundle = true;
-            BuildPipeline.BuildPlayer(levels, path + "/BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
+            BuildPipeline.BuildPlayer(levels, buildParams.checkoutPath + "/BuiltGame.aab", BuildTarget.Android, BuildOptions.None);
         }
         
         [MenuItem("Build/iOS Build")]
@@ -37,9 +41,11 @@ namespace Editor.ProjectBuilder
             return scenes.ToArray();
         }
 
-        private void GetParamsFile()
+        private static void GetParamsFile<T>(out T buildParams)
         {
-            
+            var dataBaseHelper = new DataBaseHelper();
+            dataBaseHelper.TextIntoType("buildparams.txt", out T parsedResult);
+            buildParams = parsedResult;
         }
     }
     
