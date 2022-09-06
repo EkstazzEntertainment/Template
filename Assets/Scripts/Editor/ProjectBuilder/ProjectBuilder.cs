@@ -34,21 +34,21 @@ namespace Editor.ProjectBuilder
             {
                 EditorUserBuildSettings.development = true;
                 EditorUserBuildSettings.buildAppBundle = false;
-                BuildPipeline.BuildPlayer(levels,$"Build/development/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.Development);
+                BuildPipeline.BuildPlayer(levels,$"Build/development/APK/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.Development);
             }
             
             void BuildReleaseApk()
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = false;
-                BuildPipeline.BuildPlayer(levels,$"Build/release/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels,$"Build/release/APK/{buildParams.name}.apk", BuildTarget.Android, BuildOptions.None);
             }
 
             void BuildReleaseAAb()
             {
                 EditorUserBuildSettings.development = false;
                 EditorUserBuildSettings.buildAppBundle = true;
-                BuildPipeline.BuildPlayer(levels,$"Build/release/{buildParams.name}.aab", BuildTarget.Android, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels,$"Build/release/AAB/{buildParams.name}.aab", BuildTarget.Android, BuildOptions.None);
             }
         }
         
