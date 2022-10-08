@@ -1,0 +1,18 @@
+{
+  "name": "Ekstazz.Ui",
+  "references": [
+    "Zenject",
+    "Ekstazz.Utils",
+    "Ekstazz.Core",
+    "Unity.TextMeshPro",
+    "DOTweenPro.Scripts"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": []
+}

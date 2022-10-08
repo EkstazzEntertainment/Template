@@ -1,0 +1,15 @@
+[
+	{
+		"levelId": "Level_02",
+		"LevelGames": [
+			{
+				"sceneId": "Level_Game1_02",
+				"GameID": "Game1"
+			},
+			{
+				"sceneId": "Level_Game2_02",
+				"GameID": "Game2"
+			}
+		]
+	}
+]

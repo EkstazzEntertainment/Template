@@ -1,0 +1,10 @@
+{
+    "name": "Reporter.Editor",
+    "references": [
+        "Reporter"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

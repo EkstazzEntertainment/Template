@@ -1,0 +1,21 @@
+{
+    "name": "Ekstazz.Sounds",
+    "references": [
+        "Strange",
+        "Ekstazz.Core",
+        "Ekstazz.Utils",
+        "Ekstazz.Saves",
+        "Ekstazz.Ui",
+        "MoreMountains.NiceVibrations",
+        "MoreMountains.NiceVibrations.Haptics",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Game1
+  m_EditorClassIdentifier: 
+  m_GroupName: Game1
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e820728f8e1f342a19a741c4ff1764fd
+  m_SerializeEntries:
+  - m_GUID: 628deb8cea2b146eb86f300f53d99bd1
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_01.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acb04152869604831bb0c3f772e8e0a5
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_02.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84b4815dfddf640f494f0bb0f739d89c
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_03.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac93598c41aed4b1185c4882be8d9d5c
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_04.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 287d2d34628cc46ea98d049439f57dcd
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_05.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 10866589540804b198c1aec6d5f6373d
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_06.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a694489cb9618447cb5257bb00fd2325
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_07.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc36daa510da24b788203b219654ca4f
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_08.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 362ba5e6f12f64277933f7c83f186b6b
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_09.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: df7de79719adb418186f2b486e34a18f
+    m_Address: Assets/_ROOT/Scenes/Areas/Game1/Level_Game1_10.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9cfa52906e9204787893e1e77256d039, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5a7e0f5aca5a24ad394301084ed3acfc, type: 2}
+    - {fileID: 11400000, guid: e4b18608fa3d945e1b000ddc0c7babab, type: 2}

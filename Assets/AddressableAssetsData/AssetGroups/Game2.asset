@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Game2
+  m_EditorClassIdentifier: 
+  m_GroupName: Game2
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e6cc800507e5a42a3bd75d60bdcc44eb
+  m_SerializeEntries:
+  - m_GUID: 6df143fef928746a1a89e9df5cacf8b4
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_01.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e630f85e427764315906e77114135c7c
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_02.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0d3442b1a8f01422cabd55664de66b14
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_03.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2102e34be590b4964b592c0f07c48de4
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_04.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8338ac137b74343b8836c3dcd37ce5c0
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_05.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63f9ecb392d314daea50bc5493af0e8a
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_06.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5df30d6ee2bcd4a18a80096ce89a3bbd
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_07.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c3c3eb4d94be4daaa3fb84f59442f3a
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_08.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4863485ded9ca49359b38d8ea167a063
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_09.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0ef057d1dba3b47ef926b7e5c5279aec
+    m_Address: Assets/_ROOT/Scenes/Areas/Game2/Level_Game2_10.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9cfa52906e9204787893e1e77256d039, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2d64ed6df5eaf4272a0240566989f2b0, type: 2}
+    - {fileID: 11400000, guid: b3944d777bfa54fc38c113969e437355, type: 2}

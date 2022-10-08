@@ -1,0 +1,14 @@
+{
+  "name": "Ekstazz.Utils.Editor",
+  "references": [
+    "Ekstazz.Utils",
+    "Unity.TextMeshPro",
+    "Unity.TextMeshPro.Editor"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false
+}

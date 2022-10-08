@@ -1,0 +1,17 @@
+{
+  "name": "Ekstazz.Core.Editor",
+  "references": [
+    "Ekstazz.Core",
+    "Zenject"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": []
+}

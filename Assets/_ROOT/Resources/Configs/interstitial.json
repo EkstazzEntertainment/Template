@@ -1,0 +1,13 @@
+{
+  "InterstitialsEnabled": true,
+  "LevelToShowAd": 3,
+  "GlobalTimeCapping" : 60
+  //  "SpecificCappings": [
+  //    {
+  //      "PlacementsGroup" : [
+  //        "Level_Fail, Level_Restart"
+  //      ],
+  //      "TimeCapping" : 55
+  //    }
+  //  ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Ekstazz.Tools",
+    "rootNamespace": "",
+    "references": [
+        "DOTween.Modules",
+        "Unity.TextMeshPro",
+        "Zenject",
+        "Ekstazz.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Game.Flow",
+    "rootNamespace": "",
+    "references": [
+        "Zenject",
+        "AsyncTools",
+        "Unity.TextMeshPro",
+        "Ekstazz.Core",
+        "Ekstazz.Saves",
+        "Ekstazz.Configs",
+        "Ekstazz.Utils",
+        "Ekstazz.Ui"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+﻿[
+  {
+    "TitleKey": "notification_return_day_1_title",
+    "TextKey": "notification_return_day_1_body",
+    "TimeInterval": "1.00:00:00"
+  },
+  {
+    "TitleKey": "notification_return_day_3_title",
+    "TextKey": "notification_return_day_3_body",
+    "TimeInterval": "3.00:00:00"
+  },
+  {
+    "TitleKey": "notification_return_day_7_title",
+    "TextKey": "notification_return_day_7_body",
+    "TimeInterval": "7.00:00:00"
+  }
+]

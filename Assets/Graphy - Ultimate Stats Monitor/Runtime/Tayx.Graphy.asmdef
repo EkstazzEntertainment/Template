@@ -1,0 +1,22 @@
+{
+    "name": "Tayx.Graphy",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:45c96ff0e2208db40a70065003380dba"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "GRAPHY_NEW_INPUT"
+        }
+    ],
+    "noEngineReferences": false
+}

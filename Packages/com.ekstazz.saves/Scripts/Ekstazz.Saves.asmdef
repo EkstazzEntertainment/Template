@@ -1,0 +1,12 @@
+{
+    "name": "Ekstazz.Saves",
+    "references": [
+        "Ekstazz.Core",
+        "Ekstazz.DebugPanel",
+        "Zenject"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

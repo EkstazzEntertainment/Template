@@ -1,0 +1,26 @@
+{
+    "name": "Ekstazz.Wallet",
+    "rootNamespace": "",
+    "references": [
+        "Zenject",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "Game.Flow",
+        "Ekstazz.Utils",
+        "Ekstazz.Core",
+        "Ekstazz.Currencies",
+        "Ekstazz.Configs",
+        "Ekstazz.Saves",
+        "Ekstazz.Ui",
+        "Ekstazz.Shared.Ui"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

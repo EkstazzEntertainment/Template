@@ -1,0 +1,16 @@
+namespace Ekstazz.Sounds
+{
+    using UnityEngine;
+
+    public class AdvancedVibrationButton : TapVibrationButton
+    {
+        [Header("Vibration settings")]
+        [SerializeField]
+        private AdvancedVibration vibrationSetup;
+
+        public override void Vibrate()
+        {
+            GameSounds.Haptic(vibrationSetup);
+        }
+    }
+}

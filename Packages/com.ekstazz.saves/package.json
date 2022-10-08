@@ -1,0 +1,18 @@
+{
+  "name": "com.ekstazz.saves",
+  "displayName": "Ekstazz Saves",
+  "version": "1.0.4",
+  "unity": "2019.3",
+  "description": "Data saving and extraction",
+  "dependencies": {
+    "com.ekstazz.core" : "1.0.0",
+    "com.ekstazz.debugpanel" : "1.0.0",
+    "jillejr.newtonsoft.json-for-unity" : "1.0.0"
+  },
+  "repository": "https://github.com/georgealexanian/packages.git",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Ekstazz Entertainment",
+    "url": ""
+  }
+}

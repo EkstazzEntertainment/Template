@@ -1,0 +1,19 @@
+{
+    "name": "Ekstazz.Wallet.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Ekstazz.Wallet",
+        "Ekstazz.Currencies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

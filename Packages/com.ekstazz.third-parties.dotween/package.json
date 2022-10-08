@@ -1,0 +1,16 @@
+{
+  "name": "com.ekstazz.third-parties.dotween",
+  "displayName": "Ekstazz 3rd Parties. DoTween",
+  "version": "1.0.2",
+  "unity": "2020.1",
+  "description": "DoTween",
+  "dependencies": {
+    
+  },
+  "repository": "https://github.com/georgealexanian/packages.git",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Ekstazz Entertainment",
+    "url": ""
+  }
+}

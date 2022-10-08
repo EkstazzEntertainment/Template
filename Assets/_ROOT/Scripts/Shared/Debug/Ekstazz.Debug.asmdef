@@ -1,0 +1,22 @@
+{
+    "name": "Ekstazz.Debug",
+    "rootNamespace": "",
+    "references": [
+        "Zenject",
+        "Unity.TextMeshPro",
+        "MoreMountains.NiceVibrations",
+        "MoreMountains.NiceVibrations.Haptics",
+        "Ekstazz.Core",
+        "Ekstazz.Sounds",
+        "Ekstazz.DebugPanel"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

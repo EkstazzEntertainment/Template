@@ -1,0 +1,19 @@
+{
+    "name": "Ekstazz.DebugPanel",
+    "rootNamespace": "",
+    "references": [
+        "Ekstazz.Core",
+        "Ekstazz.Utils",
+        "Unity.TextMeshPro",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

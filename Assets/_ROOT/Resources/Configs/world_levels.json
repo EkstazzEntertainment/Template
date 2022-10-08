@@ -1,0 +1,61 @@
+{
+  "GameWorldThemeInfos": [
+    {
+      "gameID": "Game1",
+      "configurations": [
+        {
+          "WorldId": "World_1",
+          "Levels": [
+            "Level_Game1_01",
+            "Level_Game1_02",
+            "Level_Game1_03",
+            "Level_Game1_04",
+            "Level_Game1_05"
+          ]
+        },
+        {
+          "WorldId": "World_2",
+          "Levels": [
+            "Level_Game1_06",
+            "Level_Game1_07",
+            "Level_Game1_08",
+            "Level_Game1_09",
+            "Level_Game1_10"
+          ]
+        }
+      ]
+    },
+    
+    
+    
+    
+    
+    
+    
+    {
+      "gameID": "Game2",
+      "configurations": [
+        {
+          "WorldId": "World_1",
+          "Levels": [
+            "Level_Game2_01",
+            "Level_Game2_02",
+            "Level_Game2_03",
+            "Level_Game2_04",
+            "Level_Game2_05"
+          ]
+        },
+        {
+          "WorldId": "World_2",
+          "Levels": [
+            "Level_Game2_06",
+            "Level_Game2_07",
+            "Level_Game2_08",
+            "Level_Game2_09",
+            "Level_Game2_10"
+          ]
+        }
+      ]
+    }
+  ]
+}
