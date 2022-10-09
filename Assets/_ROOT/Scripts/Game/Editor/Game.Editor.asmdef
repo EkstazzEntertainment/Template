@@ -4,7 +4,8 @@
     "references": [
         "Game.ProtoGames",
         "Unity.Addressables",
-        "Unity.Addressables.Editor"
+        "Unity.Addressables.Editor",
+        "com.ekstazz.builder"
     ],
     "includePlatforms": [
         "Editor"

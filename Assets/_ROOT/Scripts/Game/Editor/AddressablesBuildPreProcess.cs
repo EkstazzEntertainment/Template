@@ -1,36 +1,27 @@
 namespace Game.Editor
 {
     using System;
-    using UnityEditor;
+    using TatemGames.Editor.Build;
     using UnityEditor.AddressableAssets.Settings;
     using UnityEngine;
 
     
-    public class AddressablesBuildPreProcess
+    public class AddressablesBuildPreProcess : IPreProjectBuilderAction
     {
         public void Execute()
         {
-            Debug.Log("Building Addressables");
+            Debug.Log("Addressables preprocessor running...");
             try
             {
-                Debug.Log("Started building");
+                Debug.Log("Building Addressables content");
                 AddressableAssetSettings.BuildPlayerContent();
             }
             catch (Exception e)
             {
                 Debug.LogException(e);
             }
-            Debug.Log("Finished building");
-        }
-    }
 
-    public static class AddressableMenu
-    {
-        [MenuItem("Addressables/Build Addressables")]
-        public static void Build()
-        {
-            var hook = new AddressablesBuildPreProcess();
-            hook.Execute();
+            Debug.Log("Addressables preprocessor finished");
         }
     }
 }

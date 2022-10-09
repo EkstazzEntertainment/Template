@@ -1,0 +1,15 @@
+{
+  "name": "com.ekstazz.builder",
+  "displayName": "Ekstazz Builder",
+  "version": "1.0.5",
+  "unity": "2019.1",
+  "description": "Builder",
+  "dependencies": {
+  },
+  "repository": "https://github.com/georgealexanian/packages.git",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Ekstazz Entertainment",
+    "url": ""
+  }
+}
