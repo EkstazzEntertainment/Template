@@ -32,7 +32,7 @@ namespace Editor.ProjectBuilder
             var dataBaseHelper = new DataBaseHelper();
             dataBaseHelper.RemoveDirectory("Build/");
 
-            // PreBuildActions.ExecutePreBuildActions();
+            PreBuildActions.ExecutePreBuildActions();
                 
             if (buildParams.development)
             {
