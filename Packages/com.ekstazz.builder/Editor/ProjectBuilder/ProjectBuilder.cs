@@ -110,7 +110,7 @@ namespace Editor.ProjectBuilder
             {
                 EditorUserBuildSettings.development = false;
                 var path = $"Build/";
-                BuildPipeline.BuildPlayer(levels, path, BuildTarget.iOS, BuildOptions.None);
+                BuildPipeline.BuildPlayer(levels, path, BuildTarget.iOS, BuildOptions.Development);
             }
         }
 
