@@ -4,6 +4,7 @@ namespace Tests
     using Ekstazz.Configs.Cache;
     using NUnit.Framework;
 
+    
     public class RulesTests
     {
         [Test]

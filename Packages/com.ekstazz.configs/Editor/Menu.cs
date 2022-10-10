@@ -5,6 +5,7 @@
     using UnityEditor;
     using UnityEngine;
 
+    
     public class Menu
     {
         [MenuItem("Ekstazz/Configs/Cache/Reset cache", false, 0)]

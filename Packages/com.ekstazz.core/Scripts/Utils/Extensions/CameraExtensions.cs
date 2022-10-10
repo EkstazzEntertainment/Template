@@ -3,6 +3,7 @@ namespace Ekstazz.Utils.Extensions
     using Utils;
     using UnityEngine;
 
+    
     public static class CameraExtensions
     {
         public static Vector2 ToScreenPoint(this Vector3 worldPoint)
@@ -18,8 +19,11 @@ namespace Ekstazz.Utils.Extensions
 
         public static Vector2 CanvasPoint(this GameObject tr, Vector3 screenPoint)
         {
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(tr.GetComponent<RectTransform>(), screenPoint,
-                Camera.main, out var pos);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                tr.GetComponent<RectTransform>(), 
+                screenPoint,
+                Camera.main, 
+                out var pos);
             return pos;
         }
 

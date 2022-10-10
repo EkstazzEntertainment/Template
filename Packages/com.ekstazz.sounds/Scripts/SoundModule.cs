@@ -4,13 +4,14 @@ namespace Ekstazz.Sounds
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     [AutoInstalledModule]
     public class SoundModule : ModuleInstaller
     {
         public override string Name => "Ekstazz.Sound";
-
         public override IModuleInitializer ModuleInitializer => new Initializer();
 
+        
         public override void InstallBindings()
         {
             Container.Bind<IVibrations>().To<Vibrations>().AsSingle();

@@ -1,7 +1,8 @@
-using System;
-
 namespace Ekstazz.Ui.Windows
 {
+    using System;
+
+    
     [AttributeUsage(AttributeTargets.Class)]
     public sealed class WindowMetaAttribute : Attribute
     {

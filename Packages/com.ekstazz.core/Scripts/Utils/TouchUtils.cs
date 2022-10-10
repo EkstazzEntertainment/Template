@@ -5,6 +5,7 @@
     using UnityEngine;
     using UnityEngine.EventSystems;
 
+    
     public static class TouchUtils
     {
         public static T GetTouchedComponent<T>(Vector3 touchPosition)

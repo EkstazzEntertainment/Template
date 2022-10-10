@@ -3,6 +3,7 @@ namespace Ekstazz.Debug.DebugOptions
     using System.Collections.Generic;
     using System.Linq;
 
+    
     public abstract class DebugOptions<TOption> where TOption : IDebugOption
     {
         public void AddOption(TOption option)

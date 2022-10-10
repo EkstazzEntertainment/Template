@@ -5,9 +5,11 @@ namespace Tests
     using NUnit.Framework;
     using UnityEngine;
 
+    
     public class VersionProviderTests
     {
         private VersionProvider versionProvider;
+        
         
         [OneTimeSetUp]
         public void SetUp()

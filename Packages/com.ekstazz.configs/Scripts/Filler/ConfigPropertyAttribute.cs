@@ -2,6 +2,7 @@
 {
     using System;
 
+    
     public class ConfigPropertyAttribute : Attribute
     {
         public ConfigPropertyAttribute()
@@ -13,11 +14,8 @@
         public const int DefaultPriority = 1;
 
         public int Priority { get; set; }
-
         public Type PostProcessor { get; set; }
-
         public string Key {get; set; }
-
         public bool IsMultiConfig { get; set; }
     }
 

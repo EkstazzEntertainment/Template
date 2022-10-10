@@ -5,6 +5,7 @@ namespace Ekstazz.Utils.Extensions
     using System.Linq;
     using Random = System.Random;
 
+    
     public static class EnumerableExtensions
     {
         public static T RandomElement<T>(this IEnumerable<T> collection)

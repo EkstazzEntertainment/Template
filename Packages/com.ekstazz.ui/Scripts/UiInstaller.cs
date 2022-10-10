@@ -2,6 +2,7 @@ namespace Ekstazz.Ui
 {
     using Core.Modules;
 
+    
     [AutoInstalledModule]
     public class UiInstaller : ModuleInstaller
     {

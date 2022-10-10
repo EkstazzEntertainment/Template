@@ -2,6 +2,7 @@ namespace Ekstazz.Saves.Converters
 {
     using Newtonsoft.Json.Linq;
 
+    
     public abstract class IncrementalSaveConverter
     {
         public bool CanConvert(JObject jObject)
@@ -16,7 +17,6 @@ namespace Ekstazz.Saves.Converters
         }
 
         protected abstract bool CanConvertFromVersion(int version);
-
         public abstract int GoalVersion { get; }
 
         public void Convert(JObject jObject)

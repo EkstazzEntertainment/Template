@@ -4,9 +4,11 @@ namespace Tests
     using Ekstazz.Configs.Cache;
     using NUnit.Framework;
 
+    
     public class MetaExtractorTests
     {
         private IMetaExtractor extractor;
+        
         
         [OneTimeSetUp]
         public void SetUp()
@@ -18,8 +20,8 @@ namespace Tests
         public void _01ExtractValidMeta()
         {
             var config = @"{
-  _meta: {priority: 1}
-}";
+                _meta: {priority: 1}
+            }";
             var cachedConfig = extractor.SplitConfig(config);
             Assert.That(cachedConfig.meta.priority, Is.EqualTo(1));
         }
@@ -36,8 +38,8 @@ namespace Tests
         public void _03ExtractInvalidPriority()
         {
             var config = @"{
-  _meta: {priorit: 1}
-}";
+                _meta: {priorit: 1}
+            }";
             var cachedConfig = extractor.SplitConfig(config);
             Assert.That(cachedConfig.meta.priority, Is.EqualTo(0));
         }
@@ -46,8 +48,8 @@ namespace Tests
         public void _04ExtractInvalidMeta()
         {
             var config = @"{
-  _meta: }
-}";
+                _meta: }
+            }";
             Assert.Throws<Exception>(() => extractor.SplitConfig(config));
         }
         
@@ -64,7 +66,7 @@ namespace Tests
         public void _06ExtractFromCsv()
         {
             var config = @"test,_meta
-1,{priority: 1}";
+                1,{priority: 1}";
             var cachedConfig = extractor.SplitConfig(config);
             Assert.That(cachedConfig.meta.priority, Is.EqualTo(1));
         }

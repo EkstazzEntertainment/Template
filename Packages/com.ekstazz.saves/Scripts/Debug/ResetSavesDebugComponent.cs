@@ -3,6 +3,7 @@ namespace Ekstazz.Saves.DebugPanel
     using System.IO;
     using UnityEngine;
 
+    
     public class ResetSavesDebugComponent : MonoBehaviour
     {
         public void ResetAllSaves(bool quitApplication)

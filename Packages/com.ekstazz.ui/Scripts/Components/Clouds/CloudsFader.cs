@@ -5,13 +5,14 @@ namespace Ekstazz.Ui.Faders.Clouds
     using Faders;
     using UnityEngine;
 
+    
     public class CloudsFader : UiFader
     {
-        [SerializeField, Range(0.3f, 3)]
-        private float duration = 1;
+        [SerializeField, Range(0.3f, 3)] private float duration = 1;
 
         private CloudsTransition clouds;
 
+        
         private void Awake()
         {
             clouds = FindObjectOfType<CloudsTransition>();

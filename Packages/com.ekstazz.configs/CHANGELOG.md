@@ -11,3 +11,5 @@
 1.0.4   updage package.
 
 1.0.6   Renaming.
+
+1.0.7   Beautification.

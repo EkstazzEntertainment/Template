@@ -5,17 +5,14 @@
     using JetBrains.Annotations;
     using UnityEngine;
 
+    
     public class BottomUpFader : UiFader
     {
-        [SerializeField]
-        private bool invert;
+        [SerializeField] private bool invert;
+        [SerializeField] private float duration = 0.2f;
+        [SerializeField] private int delta;
 
-        [SerializeField]
-        private float duration = 0.2f;
-
-        [SerializeField]
-        private int delta;
-
+        
         [UsedImplicitly]
         public void Awake()
         {

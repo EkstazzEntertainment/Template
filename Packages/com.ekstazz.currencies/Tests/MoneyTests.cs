@@ -3,6 +3,7 @@
     using Ekstazz.Currencies;
     using NUnit.Framework;
 
+    
     public class MoneyTests
     {
         private MoneyFactory factory;
@@ -15,12 +16,9 @@
             factory.Register<StubCurrency2>();
         }
 
-        // A Test behaves as an ordinary method
         [Test]
         public void _01SingleMoneyHasAmountAndCurrency()
         {
-//            var singleMoney = Money.Create<StubCurrency>(10);
-//            Assert.That(singleMoney.CurrencyType is ICurrencyType);
         }
 
         [Test]

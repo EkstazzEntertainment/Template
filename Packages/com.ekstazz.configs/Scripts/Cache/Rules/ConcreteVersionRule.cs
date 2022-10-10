@@ -4,6 +4,7 @@ namespace Ekstazz.Configs.Cache
     {
         private readonly IVersionProvider versionProvider;
         
+        
         public ConcreteVersionRule(IVersionProvider versionProvider, IConfigRule rule) : base(rule)
         {
             this.versionProvider = versionProvider;

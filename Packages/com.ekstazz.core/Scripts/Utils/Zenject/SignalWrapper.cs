@@ -4,10 +4,10 @@ namespace Ekstazz.Utils
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     public class SignalWrapper<T> : Command where T : new()
     {
-        [Inject]
-        public SignalBus SignalBus { get; set; }
+        [Inject] public SignalBus SignalBus { get; set; }
 
         public override async Task Execute()
         {

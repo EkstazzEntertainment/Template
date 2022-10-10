@@ -3,20 +3,17 @@
     using System;
     using UnityEngine;
 
+    
     public class RuntimeOption : IDebugOption
     {
         public string Name { get; set; }
-
         public Action<float> OnValueChanged { get; set; }
-
         public float Min { get; set; }
-
         public float Max { get; set; }
-
         public float Default { get; set; }
-
         public float Value { get; private set; }
 
+        
         public void Init()
         {
             if (PlayerPrefs.HasKey(Name))

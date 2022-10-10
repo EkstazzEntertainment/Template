@@ -3,23 +3,23 @@ namespace Ekstazz.Currencies
     using System.Collections.Generic;
     using System.Linq;
 
+    
     public class MoneyBag
     {
         private readonly List<Money> moneyList;
 
+        
         public MoneyBag(params Money[] money)
         {
             moneyList = new List<Money>(money);
         }
 
-        public bool Has<T>()
-            where T : ICurrencyType
+        public bool Has<T>() where T : ICurrencyType
         {
             return moneyList.Any(m => m.Type is T);
         }
 
-        public bool Has<T>(Amount amount)
-            where T : ICurrencyType
+        public bool Has<T>(Amount amount) where T : ICurrencyType
         {
             var neededCurrency = moneyList.FirstOrDefault(m => m.Type is T);
             if (neededCurrency.Type == null)

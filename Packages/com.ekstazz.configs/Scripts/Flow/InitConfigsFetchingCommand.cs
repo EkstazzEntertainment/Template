@@ -5,6 +5,7 @@ namespace Ekstazz.Configs.Flow
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     public class InitConfigsFetchingCommand : Command
     {
         [Inject(Id = FetcherOrigin.Local)]
@@ -16,6 +17,7 @@ namespace Ekstazz.Configs.Flow
         [Inject]
         internal ICacheSaver CacheSaver { get; set; }
 
+        
         public override async Task Execute()
         {
             CacheSaver.Load().Wait();

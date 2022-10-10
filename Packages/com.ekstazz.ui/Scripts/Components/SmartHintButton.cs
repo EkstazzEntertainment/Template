@@ -3,18 +3,19 @@
     using Ekstazz.Utils;
     using DG.Tweening;
     using UnityEngine;
-
+    
+    
     public abstract class SmartHintButton : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject hintObject;
+        [SerializeField] private GameObject hintObject;
 
         private Tweener moveTween;
-
+        
         public bool IsActive { get; private set; }
 
         public abstract void OnClick();
 
+        
         private void Start()
         {
             Subscribe();
@@ -59,9 +60,7 @@
         }
 
         protected abstract void Subscribe();
-
         protected abstract void Init();
-
         protected abstract void Unsubscribe();
 
         protected void TryHide()

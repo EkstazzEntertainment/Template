@@ -3,6 +3,7 @@ namespace Ekstazz.Utils
     using System;
     using UnityEngine;
 
+    
     public interface IApplicationEventsTracker
     {
         public event Action<bool> ApplicationPause;
@@ -10,12 +11,14 @@ namespace Ekstazz.Utils
         public event Action<bool> ApplicationFocus;
     }
 
+    
     public class ApplicationEventsTracker : MonoBehaviour, IApplicationEventsTracker
     {
         public event Action<bool> ApplicationPause;
         public event Action ApplicationQuitting;
         public event Action<bool> ApplicationFocus;
 
+        
         private void OnApplicationPause(bool pauseStatus)
         {
             InvokeOnApplicationPause(pauseStatus);

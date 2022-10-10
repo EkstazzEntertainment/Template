@@ -4,6 +4,7 @@
     using UnityEditor;
     using UnityEngine;
 
+    
     public class Menu
     {
         [MenuItem("Ekstazz/Saves/Reset all", false, 0)]

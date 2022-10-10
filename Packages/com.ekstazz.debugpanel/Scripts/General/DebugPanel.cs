@@ -5,30 +5,22 @@ namespace Ekstazz.DebugPanel
     using UnityEngine;
     using Zenject;
 
+    
     public class DebugPanel : DebugViewParameter<float>
     {
-        [Inject]
-        public DebugPanelAlphaController DebugPanelAlphaController { get; set; }
+        [Inject] public DebugPanelAlphaController DebugPanelAlphaController { get; set; }
+        [Inject] public DebugTabSettings DebugTabSettings { get; set; }
+        [Inject] public LastTabIndexProvider LastTabIndexProvider { get; set; }
 
-        [Inject]
-        public DebugTabSettings DebugTabSettings { get; set; }
-        
-        [Inject]
-        public LastTabIndexProvider LastTabIndexProvider { get; set; }
-
-        [SerializeField]
-        private List<DebugTab> tabs;
-
-        [SerializeField]
-        private DebugPage debugPage;
-
-        [SerializeField]
-        private CanvasGroup canvasGroup;
+        [SerializeField] private List<DebugTab> tabs;
+        [SerializeField] private DebugPage debugPage;
+        [SerializeField] private CanvasGroup canvasGroup;
 
         private DebugTab currentTab;
         private List<string> ids;
         private DebugComponent[] components;
 
+        
         public override void ApplyValue(float value)
         {
             canvasGroup.alpha = value;

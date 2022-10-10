@@ -4,17 +4,17 @@ namespace Ekstazz.Ui
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     [RequireComponent(typeof(Image)), RequireComponent(typeof(Button))]
     public class UiBackground : MonoBehaviour
     {
         private Button button;
-
         private Image image;
-
         private bool clicked;
 
         public Action ClickAction { get; set; }
 
+        
         private void Awake()
         {
             button = GetComponent<Button>();

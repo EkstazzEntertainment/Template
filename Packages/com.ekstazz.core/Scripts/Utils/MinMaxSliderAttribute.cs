@@ -2,6 +2,7 @@ namespace Ekstazz.Utils
 {
     using UnityEngine;
 
+    
     public class MinMaxSliderAttribute : PropertyAttribute
     {
         public readonly float max;

@@ -5,22 +5,18 @@ namespace Ekstazz.Core.Modules
     using Core;
     using Zenject;
 
+    
     public abstract class ModuleInstaller : Installer, IModuleInstaller, IModuleVerifier
     {
         public Installer ContextInstaller => this;
-
         public IModuleVerifier Verifier => this;
-
         public virtual IModuleInitializer ModuleInitializer => null;
-
         public virtual BuildType SupportedBuildType => BuildType.Any;
-
         public virtual PlatformType SupportedPlatformType => PlatformType.Any;
-
         public virtual Priority Priority => Priority.Simple;
-
         public abstract string Name { get; }
 
+        
         public ModuleVerificationResult Verify()
         {
             var messages = FindModuleErrors()

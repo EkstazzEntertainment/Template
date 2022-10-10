@@ -6,6 +6,7 @@ namespace Ekstazz.Utils.Editor
     using UnityEditor;
     using UnityEngine;
 
+    
     [CustomEditor(typeof(MonoBehaviour), true)]
     public class EditorButton : Editor
     {

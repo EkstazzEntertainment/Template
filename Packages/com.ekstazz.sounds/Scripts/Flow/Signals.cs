@@ -3,7 +3,6 @@ namespace Ekstazz.Sounds
     public class SettingsChanged
     {
         public SettingsType type;
-
         public bool state;
     }
 

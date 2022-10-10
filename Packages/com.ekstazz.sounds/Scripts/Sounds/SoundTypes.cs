@@ -4,6 +4,7 @@ namespace Ekstazz.Sounds
     using UnityEngine;
     using Random = UnityEngine.Random;
 
+    
     [Serializable]
     public class Audio
     {
@@ -11,14 +12,9 @@ namespace Ekstazz.Sounds
 
         public AudioClip clip;
 
-        [Range(-3.0f, 3.0f)]
-        public float minPitch = 1.0f;
-
-        [Range(-3.0f, 3.0f)]
-        public float maxPitch = 1.0f;
-
-        [Range(0, 1)]
-        public float volume = 1;
+        [Range(-3.0f, 3.0f)] public float minPitch = 1.0f;
+        [Range(-3.0f, 3.0f)] public float maxPitch = 1.0f;
+        [Range(0, 1)] public float volume = 1;
     }
 
     [Serializable]
@@ -26,7 +22,6 @@ namespace Ekstazz.Sounds
     {
         public AudioClip clip;
 
-        [Range(0, 1)]
-        public float volume;
+        [Range(0, 1)] public float volume;
     }
 }

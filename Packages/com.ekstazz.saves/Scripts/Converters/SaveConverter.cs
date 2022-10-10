@@ -5,9 +5,11 @@
     using Newtonsoft.Json.Linq;
     using UnityEngine;
 
+    
     internal class SaveConverter : ISaveConverter
     {
         private readonly List<IncrementalSaveConverter> converters = new List<IncrementalSaveConverter>();
+        
         
         public void AddConverter(IncrementalSaveConverter converter)
         {

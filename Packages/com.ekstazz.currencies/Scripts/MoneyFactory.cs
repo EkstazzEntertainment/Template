@@ -4,13 +4,14 @@ namespace Ekstazz.Currencies
     using System.Collections.Generic;
     using System.Linq;
 
+    
     public class MoneyFactory
     {
         private readonly Dictionary<Type, ICurrencyType> currencies = new Dictionary<Type, ICurrencyType>();
         private readonly Dictionary<string, ICurrencyType> currenciesByName = new Dictionary<string, ICurrencyType>();
         
-        public Money Create<T>(int i)
-            where T : class, ICurrencyType<T>, new()
+        
+        public Money Create<T>(int i) where T : class, ICurrencyType<T>, new()
         {
             var type = typeof(T);
             if (!currencies.ContainsKey(type))
@@ -22,12 +23,10 @@ namespace Ekstazz.Currencies
 
         private void ThrowNotFound()
         {
-            throw new KeyNotFoundException(
-                $"No such currency found. Try these: {currenciesByName.Keys.Aggregate("", (s, s1) => s + ", \"" + s1 + "\"", s => s.Remove(0, 2))}, or add new currency using Register method.");
+            throw new KeyNotFoundException($"No such currency found. Try these: {currenciesByName.Keys.Aggregate("", (s, s1) => s + ", \"" + s1 + "\"", s => s.Remove(0, 2))}, or add new currency using Register method.");
         }
 
-        public Money Create<T>(in Amount i)
-            where T : class, ICurrencyType<T>, new()
+        public Money Create<T>(in Amount i) where T : class, ICurrencyType<T>, new()
         {
             var type = typeof(T);
             if (!currencies.ContainsKey(type))
@@ -38,8 +37,7 @@ namespace Ekstazz.Currencies
             return new Money(currencies[type], i);
         }
 
-        public void Register<T>()
-            where T : class, ICurrencyType<T>, new()
+        public void Register<T>() where T : class, ICurrencyType<T>, new()
         {
             var tmpInstance = new T();
             currencies.Add(typeof(T), tmpInstance.SingleInstance);

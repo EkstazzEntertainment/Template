@@ -6,31 +6,27 @@ namespace Ekstazz.Configs.Cache
     using UnityEngine;
     using Zenject;
 
+    
     internal interface IConfigCache
     {
         string GetOrUpdateConfig(string key, bool useMultiConfig);
-
         Config GetConfig(string key, bool useMultiConfig);
-
         void Serialize(CacheSave configs);
-
         CacheSave Deserialize();
     }
 
+    
     internal class ConfigCache : IConfigCache, IConfigProvider, IInitializable
     {
-        [Inject]
-        public IMetaExtractor MetaExtractor { get; set; }
-
-        [Inject]
-        public IVersionProvider VersionProvider { get; set; }
+        [Inject] public IMetaExtractor MetaExtractor { get; set; }
+        [Inject] public IVersionProvider VersionProvider { get; set; }
 
         public IConfigProvider Provider { get; set; }
 
         private Dictionary<string, Config> configs = new Dictionary<string, Config>();
-
         private IConfigRule rule;
 
+        
         public void Initialize()
         {
             var typeRule = new TypeRule(null);
@@ -98,8 +94,7 @@ namespace Ekstazz.Configs.Cache
             }
             catch (Exception e)
             {
-                Debug.LogError(
-                    $"Failed to parse config with key: {key}. Please check that config has valid meta or no meta at all.\n{config}");
+                Debug.LogError($"Failed to parse config with key: {key}. Please check that config has valid meta or no meta at all.\n{config}");
                 Debug.LogException(e);
                 return new Config(config, new ConfigMeta());
             }

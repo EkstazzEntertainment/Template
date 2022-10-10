@@ -3,6 +3,7 @@ namespace Ekstazz.Configs
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    
     internal interface IConfigFetcher : IConfigProvider
     {
         bool IsLoaded { get; }

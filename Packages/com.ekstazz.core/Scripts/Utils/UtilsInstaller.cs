@@ -3,6 +3,7 @@ namespace Ekstazz.Utils
     using Core.Modules;
     using Coroutine;
 
+    
     [AutoInstalledModule]
     public class UtilsInstaller: ModuleInstaller
     {

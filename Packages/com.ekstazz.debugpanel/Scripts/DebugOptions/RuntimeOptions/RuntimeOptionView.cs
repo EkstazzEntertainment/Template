@@ -4,20 +4,15 @@
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     public class RuntimeOptionView : DebugOptionView<RuntimeOption>
     {
-        [SerializeField]
-        private Slider slider;
+        [SerializeField] private Slider slider;
+        [SerializeField] private TMP_Text optionValue;
+        [SerializeField] private TMP_Text min;
+        [SerializeField] private TMP_Text max;
 
-        [SerializeField]
-        private TMP_Text optionValue;
-
-        [SerializeField]
-        private TMP_Text min;
-
-        [SerializeField]
-        private TMP_Text max;
-
+        
         public override void ResetToDefault()
         {
             slider.value = Option.Default;

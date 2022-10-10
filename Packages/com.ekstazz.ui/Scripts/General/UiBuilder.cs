@@ -14,13 +14,10 @@
         [Inject] private DiContainer container;
 
         private static readonly IDictionary<string, Window> Cache = new Dictionary<string, Window>();
-
         private readonly List<Window> currentWindows = new List<Window>();
 
         protected virtual string Directory => "Common/";
-        
         public bool IsAnyWindowsOpened => currentWindows.Any();
-
         public List<Window> CurrentWindows => currentWindows.ToList();
 
         
@@ -31,7 +28,6 @@
 
         public virtual T CreateWindow<T>(UiRootType rootType = UiRootType.Local, IWindowOptions options = null, bool withBackground = false) where T : Window
         {
-            //We are searching for parent every time, because UiBuilder exists between scenes and roots may change
             var root = Object.FindObjectsOfType<UiRoot>().FirstOrDefault(r => r.Type == rootType);
             if (root == null)
             {
@@ -41,6 +37,7 @@
             var name = typeof(T).Name;
             Cache.Clear();
             Cache.TryGetValue(name, out var prefab);
+            
             if (prefab == null)
             {
                 var path = $"{Directory}UI/{name}";
@@ -68,6 +65,7 @@
             {
                 var back = root.SpawnBackground(transform);
                 back.transform.SetSiblingIndex(window.transform.GetSiblingIndex());
+                
                 if (window.CloseOnBackgroundClick)
                 {
                     back.ClickAction = () => window.Close();

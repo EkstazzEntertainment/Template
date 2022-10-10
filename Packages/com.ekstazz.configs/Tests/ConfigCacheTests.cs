@@ -9,6 +9,7 @@ namespace Tests
     using UnityEngine;
     using UnityEngine.TestTools;
 
+    
     public class ConfigCacheTests
     {
         private static string TestConfig => "{data: override, _meta: {type: \"every_time\", priority: 1}}";
@@ -21,10 +22,10 @@ namespace Tests
         private static string TestInvalidConfigValidMeta => "{data override, _meta: {type: \"every_time\"}";
         private static string TestInvalidMetaWithConcreteVersion => "{data override, _meta: {type: \"concrete_version\"}";
         
-        
         private ConfigCache cache;
         private DummyConfigProvider provider;
         private VersionProvider versionProvider;
+        
         
         [SetUp]
         public void SetUp()

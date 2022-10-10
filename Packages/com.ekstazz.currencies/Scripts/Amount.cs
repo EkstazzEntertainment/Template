@@ -2,19 +2,14 @@ namespace Ekstazz.Currencies
 {
     using System;
 
-    /// <summary>
-    /// Separate struct to work with big amounts idle-style such as billions, trillions etc.
-    /// </summary>
+
     public readonly struct Amount : IEquatable<Amount>, IComparable<Amount>, IComparable
     {
         private static readonly string[] Postfixes = {"", "k", "M", "B", "T", "P", "E", "Z", "Y", "Aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg"};
         
-        /// <summary>
-        /// Value is stored in double which supports up to 1e305 - this
-        /// must be enough for all tasks
-        /// </summary>
         private readonly double value;
 
+        
         private Amount(double value)
         {
             this.value = value;

@@ -5,13 +5,14 @@
     using System.Threading.Tasks;
     using UnityEngine;
 
+    
     internal class LocalSaveWorker : ISaveIoWorker
     {
         private readonly string filename = Path.Combine(Application.persistentDataPath, "save.dat");
 
+        
         public Task<byte[]> Read(string key)
         {
-            //we don't need cid, we use same filename all the time
             if (!File.Exists(filename))
             {
                 return Task.FromResult<byte[]>(null);
@@ -33,11 +34,7 @@
                 return Task.FromResult(false);
             }
         }
-
-        /// <summary>
-        /// writes file into temp destination, then swaps temp file with goal file,
-        /// rolls back on error
-        /// </summary>
+        
         private static void SafeWriteFile(byte[] bytes, string filename)
         {
             var sourceFileName = $"{filename}.tmp";
@@ -46,8 +43,7 @@
             SafeCommitFile(sourceFileName, filename, backupFileName);
         }
 
-        private static void SafeCommitFile(string sourceFileName, string destinationFileName,
-            string backupFileName = null)
+        private static void SafeCommitFile(string sourceFileName, string destinationFileName, string backupFileName = null)
         {
             if (string.IsNullOrEmpty(sourceFileName))
             {

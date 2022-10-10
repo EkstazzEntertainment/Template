@@ -3,12 +3,14 @@ namespace Ekstazz.DebugPanel
     using UnityEngine;
     using Zenject;
 
+    
     public class DebugPanelFactoryNormal : IDebugPanelFactory
     {
         private DiContainer diContainer;
         private Object prefab;
         private DebugPanelRoot root;
 
+        
         public DebugPanelFactoryNormal(DiContainer diContainer, Object prefab, DebugPanelRoot root)
         {
             this.diContainer = diContainer;

@@ -1,7 +1,7 @@
 namespace Game.Editor
 {
     using System;
-    using TatemGames.Editor.Build;
+    using Ekstazz.Editor.Build;
     using UnityEditor.AddressableAssets.Settings;
     using UnityEngine;
 

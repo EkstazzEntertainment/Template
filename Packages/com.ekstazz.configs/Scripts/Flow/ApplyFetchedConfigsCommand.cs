@@ -9,21 +9,13 @@ namespace Ekstazz.Configs.Flow
 
     public class ApplyFetchedConfigsCommand : Command
     {
-        [Inject(Id = FetcherOrigin.Remote)]
-        internal IConfigFetcher RemoteFetcher { get; set; }
+        [Inject(Id = FetcherOrigin.Remote)] internal IConfigFetcher RemoteFetcher { get; set; }
+        [Inject] internal ConfigTypeFiller ConfigTypeFiller { get; set; }
+        [Inject] internal IConfigurableProvider ConfigurableProvider { get; set; }
+        [Inject] internal ICacheSaver CacheSaver { get; set; }
+        [Inject] internal IConfigCache ConfigCache { get; set; }
 
-        [Inject]
-        internal ConfigTypeFiller ConfigTypeFiller { get; set; }
-
-        [Inject]
-        internal IConfigurableProvider ConfigurableProvider { get; set; }
-
-        [Inject]
-        internal ICacheSaver CacheSaver { get; set; }
-
-        [Inject]
-        internal IConfigCache ConfigCache { get; set; }
-
+        
         public override async Task Execute()
         {
             var areConfigsLoaded = false;

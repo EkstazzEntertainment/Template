@@ -6,16 +6,15 @@ namespace Ekstazz.Shared.Ui.Components
     using TMPro;
     using UnityEngine;
 
+    
     public class NotificationIcon : MonoBehaviour
     {
         private TMP_Text text;
-
         private bool currentValue;
-
         private int value;
-
         private List<(string, int)> values = new List<(string, int)>();
 
+        
         private void Awake()
         {
             text = GetComponentInChildren<TMP_Text>();

@@ -6,24 +6,20 @@
     using Data;
     using Zenject;
 
+    
     internal interface ISaver
     {   
         void LoadFromSave(SaveData saveData);
-
         SaveData CreateSave();
     }
     
-    /// <summary>
-    /// This entity is pretty simple - insert saves into saveables, extract save from saveables
-    /// </summary>
+
     internal class Saver : ISaver
     {
-        [Inject]
-        internal ISaveablesRegistry SaveablesRegistry { get; set; }
+        [Inject] internal ISaveablesRegistry SaveablesRegistry { get; set; }
+        [Inject] internal ISaveInjector SaveInjector { get; set; }
 
-        [Inject]
-        internal ISaveInjector SaveInjector { get; set; }
-
+        
         public void LoadFromSave(SaveData saveData)
         {
             var saveables = SaveablesRegistry.Saveables;

@@ -3,6 +3,7 @@
     using MoreMountains.NiceVibrations;
     using Utils;
 
+    
     public class Vibrations : IVibrations
     {
         private PlayerPrefsStoredValue<bool> enabled;

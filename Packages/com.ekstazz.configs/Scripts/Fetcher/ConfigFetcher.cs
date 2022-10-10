@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using UnityEngine;
 
+    
     internal class ConfigFetcher : IConfigFetcher
     {
         private Task fetchingTask;
@@ -56,8 +57,7 @@
             }
             else
             {
-                Debug.LogError(
-                    $"Remote config loading error: canceled = {task.IsCanceled}, faulted = {task.IsFaulted}, timedOut = {wasFetchingTimedOut}");
+                Debug.LogError($"Remote config loading error: canceled = {task.IsCanceled}, faulted = {task.IsFaulted}, timedOut = {wasFetchingTimedOut}");
                 if (task.Exception != null)
                 {
                     ServiceWrapper.LogExceptionDetails(task.Exception);
@@ -143,8 +143,7 @@
             var invariantKey = Unify(key);
             if (!configs.ContainsKey(invariantKey))
             {
-                throw new KeyNotFoundException(
-                    $"Config of {invariantKey} wasn't found. Available configs are: {GetAllConfigKeysInAString()}");
+                throw new KeyNotFoundException($"Config of {invariantKey} wasn't found. Available configs are: {GetAllConfigKeysInAString()}");
             }
 
             return configs[invariantKey];

@@ -6,12 +6,14 @@ namespace Ekstazz.DebugPanel
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     [AutoInstalledModule]
     public class DebugPanelInstaller : ModuleInstaller
     {
         public override IModuleInitializer ModuleInitializer => new Initializer();
         public override string Name => "Ekstazz.DebugPanel";
 
+        
         public override void InstallBindings()
         {
             Container.Bind<RuntimeOptions>().AsSingle();
@@ -25,17 +27,14 @@ namespace Ekstazz.DebugPanel
             Container.Bind<DebugOptionsRouter>().AsSingle();
         }
 
+        
         public class Initializer : IModuleInitializer
         {
-            [Inject]
-            private DebugOptionsRouter DebugOptionsRouter { get; set; }
+            [Inject] private DebugOptionsRouter DebugOptionsRouter { get; set; }
+            [Inject] private DebugPanelAlphaController DebugPanelAlphaController { get; set; }
+            [Inject] private DebugButtonVisibilityController DebugButtonVisibilityController { get; set; }
 
-            [Inject]
-            private DebugPanelAlphaController DebugPanelAlphaController { get; set; }
-
-            [Inject]
-            private DebugButtonVisibilityController DebugButtonVisibilityController { get; set; }
-
+            
             public void Prepare()
             {
                 DebugOptionsRouter.AddOption(new RuntimeOption

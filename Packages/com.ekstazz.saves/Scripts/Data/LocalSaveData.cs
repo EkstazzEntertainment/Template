@@ -4,6 +4,7 @@ namespace Ekstazz.Saves.Data
     {
         public override bool IsLocalSave => true;
 
+        
         public LocalSaveData(SaveParsingResult result) : base(result)
         {
         }

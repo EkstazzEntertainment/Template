@@ -3,6 +3,7 @@ namespace Ekstazz.Configs
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
+    
     internal class Parser : IConfigParser
     {
         public T ParseJson<T>(string text)

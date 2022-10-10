@@ -3,6 +3,7 @@ namespace Ekstazz.Core.Modules
     using System;
     using UnityEngine;
 
+    
     public enum LogFormat
     {
         Unity,

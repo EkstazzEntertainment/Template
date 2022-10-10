@@ -3,6 +3,7 @@ namespace Ekstazz.Utils
     using System;
     using UnityEngine;
 
+    
     public class PlayerPrefsStoredValue<T>
     {
         public T Value

@@ -3,11 +3,11 @@ namespace Ekstazz.Configs
     using System;
     using System.Reflection;
 
+    
     internal class JsonConfigPropertyFiller : ConfigPropertyFiller
     {
         protected override void ThrowIfTypeOfPropertyIsNotCorrect(PropertyInfo propertyInfo)
         {
-            // Well it's kind of always correct
         }
 
         protected override MethodInfo GetParserMethodForTypeOf(PropertyInfo propertyInfo)
@@ -29,6 +29,7 @@ namespace Ekstazz.Configs
             {
                 throw new Exception("No Parser.ParseJson() method found");
             }
+            
             return openGenericMethodInfo.MakeGenericMethod(propertyType);
         }
     }

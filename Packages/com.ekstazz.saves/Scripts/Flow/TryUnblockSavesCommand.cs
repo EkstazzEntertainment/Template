@@ -4,10 +4,10 @@ namespace Ekstazz.Saves.Flow
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     public class TryUnblockSavesCommand : Command
     {
-        [Inject]
-        internal ISaveContext SaveContext { get; set; }
+        [Inject] internal ISaveContext SaveContext { get; set; }
         
         public override async Task Execute()
         {

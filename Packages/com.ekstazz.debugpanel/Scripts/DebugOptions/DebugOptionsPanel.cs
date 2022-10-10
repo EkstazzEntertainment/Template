@@ -5,16 +5,13 @@
     using UnityEngine;
     using Zenject;
 
+    
     public abstract class DebugOptionsPanel<TOption> : MonoBehaviour where TOption : IDebugOption
     {
-        [Inject]
-        private DiContainer DiContainer { get; set; }
+        [Inject] private DiContainer DiContainer { get; set; }
         
-        [SerializeField]
-        private Transform footer;
-
-        [SerializeField]
-        private RectTransform panelRect;
+        [SerializeField] private Transform footer;
+        [SerializeField] private RectTransform panelRect;
 
         protected abstract DebugOptions<TOption> DebugOptions { get; }
         protected abstract DebugOptionView<TOption> DebugOptionView { get; }
@@ -23,6 +20,7 @@
 
         private List<DebugOptionView<TOption>> currentOptions = new List<DebugOptionView<TOption>>();
 
+        
         protected void Start()
         {
             if (!HasOptions)

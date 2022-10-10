@@ -3,10 +3,12 @@ namespace Ekstazz.Saves.Converters
     using System.Linq;
     using Newtonsoft.Json.Linq;
 
+    
     internal class DropOlderSavesConverter : IncrementalSaveConverter
     {
         private readonly int minVersionNotToDrop;
 
+        
         public DropOlderSavesConverter(int minVersionNotToDrop)
         {
             this.minVersionNotToDrop = minVersionNotToDrop;

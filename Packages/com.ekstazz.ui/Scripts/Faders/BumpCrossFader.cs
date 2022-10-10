@@ -7,16 +7,15 @@
     using UnityEngine;
     using Utils.Extensions;
 
+    
     public class BumpCrossFader : UiFader
     {
-        [SerializeField, Range(0.1f, 1)]
-        private float scale = 0.8f;
-
-        [SerializeField, Range(0.1f, 1f)]
-        private float time = 0.2f;
+        [SerializeField, Range(0.1f, 1)] private float scale = 0.8f;
+        [SerializeField, Range(0.1f, 1f)] private float time = 0.2f;
 
         private CanvasGroup cg;
 
+        
         [UsedImplicitly]
         public void Awake()
         {

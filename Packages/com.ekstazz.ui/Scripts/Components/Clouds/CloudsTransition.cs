@@ -2,12 +2,14 @@ namespace Ekstazz.Ui.Faders.Clouds
 {
     using UnityEngine;
 
+    
     public class CloudsTransition : MonoBehaviour
     {
         private Animator animator;
-
+        
         private string key = "CloudTransitionFX";
 
+        
         private void Awake()
         {
             animator = GetComponent<Animator>();

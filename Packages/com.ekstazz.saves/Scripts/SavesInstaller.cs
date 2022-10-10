@@ -11,13 +11,14 @@ namespace Ekstazz.Saves
     using UnityEngine;
     using Zenject;
 
+    
     [AutoInstalledModule]
     public class SavesInstaller : ModuleInstaller
     {
         public override IModuleInitializer ModuleInitializer => new Initializer();
-
         public override string Name => "Ekstazz.Saves";
 
+        
         public override void InstallBindings()
         {
             Container.Bind<ISaveablesRegistry>().To<SaveablesRegistry>().AsSingle();
@@ -46,39 +47,36 @@ namespace Ekstazz.Saves
             saveConverter.AddConverter(new DropOlderSavesConverter(Serialization.MinimumVersion));
         }
 
+        
         protected override IEnumerable<ModuleVerificationResult> FindModuleErrors()
         {
             var serializationVersion = Resources.Load<SerializationVersion>($"Settings/{nameof(SerializationVersion)}");
             if (serializationVersion == null)
             {
-                yield return ModuleVerificationResult.HasError(
-                    "Please, add SerializationVersion asset to Resources/Settings via Create menu (Ekstazz/Saves/Serialization Version)");
+                yield return ModuleVerificationResult.HasError("Please, add SerializationVersion asset to Resources/Settings via Create menu (Ekstazz/Saves/Serialization Version)");
             }
 
             if (serializationVersion != null)
             {
                 if (serializationVersion.currentVersion < serializationVersion.minimumVersion)
                 {
-                    yield return
-                        ModuleVerificationResult.HasError("Current serialization version is less than minimum");
+                    yield return ModuleVerificationResult.HasError("Current serialization version is less than minimum");
                 }
 
                 if (serializationVersion.currentVersion <= 0 || serializationVersion.minimumVersion <= 0)
                 {
-                    yield return ModuleVerificationResult.HasError(
-                        "Serialization version is less than or equal to 0. Please make sure version is positive number");
+                    yield return ModuleVerificationResult.HasError("Serialization version is less than or equal to 0. Please make sure version is positive number");
                 }
             }
         }
 
+        
         private class Initializer : IModuleInitializer
         {
-            [Inject]
-            private ToggleOptions ToggleOptions { get; set; }
+            [Inject] private ToggleOptions ToggleOptions { get; set; }
+            [Inject] private ISaveContext SaveContext { get; set; }
 
-            [Inject]
-            private ISaveContext SaveContext { get; set; }
-
+            
             public void Prepare()
             {
                 ToggleOptions.AddOption(new ToggleOption

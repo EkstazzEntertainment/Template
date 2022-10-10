@@ -2,6 +2,7 @@ namespace Ekstazz.Utils.Extensions
 {
     using UnityEngine;
 
+    
     public static class VectorExtensions
     {
         public static float FromRange(this Vector2 range)

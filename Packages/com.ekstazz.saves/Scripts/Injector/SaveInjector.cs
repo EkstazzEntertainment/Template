@@ -5,9 +5,11 @@
     using System.Linq;
     using UnityEngine;
 
+    
     internal class SaveInjector : ISaveInjector
     {
         private readonly List<SaveComponentInjector> injectors = new List<SaveComponentInjector>();
+        
         
         [Obsolete("This method is empty to avoid compile errors with old version.\r\n Method AutoRegisterSaves registers all saves marked dy SaveComponentAttribute automaticaly")]
         public static void Register<T>() where T : class, ISaveComponent
@@ -32,6 +34,7 @@
                     .SelectMany(assembly => assembly.GetTypes())
                     .Where(HasSaveAttributeAndIsSaveComponent);
             var log = "Register saves:\n";
+            
             foreach (var type in autoSaveTypes)
             {
                 if (!typeof(ISaveComponent).IsAssignableFrom(type))

@@ -1,11 +1,11 @@
 namespace Ekstazz.Core.Editor
 {
-    using System;
     using System.Collections.Generic;
     using Modules;
     using UnityEditor;
     using UnityEngine;
 
+    
     public class Menu
     {
         [MenuItem("Ekstazz/Modules/Verify All")]

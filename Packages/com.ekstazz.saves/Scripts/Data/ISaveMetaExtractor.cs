@@ -8,14 +8,12 @@ namespace Ekstazz.Saves.Data
     internal abstract class SaveMeta
     {
         public abstract bool IsEqualTo(SaveMeta meta);
-        
         public abstract CompareResult CompareTo(SaveMeta meta);
     }
 
     internal class CompareResult
     {
         public bool AreEqual { get; set; }
-        
         public SaveMeta BestOne { get; set; }
     }
     

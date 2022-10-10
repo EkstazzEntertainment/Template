@@ -13,3 +13,5 @@
 1.0.7   Renaming.
 
 1.0.8   Path fixes.
+
+1.0.9   Beautification.

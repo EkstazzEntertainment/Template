@@ -6,6 +6,7 @@ namespace Ekstazz.Utils.Extensions
     using UnityEngine;
     using Object = UnityEngine.Object;
 
+    
     public static class GameObjectExtensions
     {
         public static bool HasComponent<T>(this GameObject gameObject) where T : MonoBehaviour

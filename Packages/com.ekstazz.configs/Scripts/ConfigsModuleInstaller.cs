@@ -5,8 +5,8 @@ namespace Ekstazz.Configs
     using System.Linq;
     using System.Reflection;
     using Cache;
-    using Ekstazz.Core;
-    using Ekstazz.Core.Modules;
+    using Core;
+    using Core.Modules;
     using Settings;
     using UnityEngine;
     using Zenject;
@@ -19,6 +19,7 @@ namespace Ekstazz.Configs
         public override Priority Priority => Priority.High;
         public override string Name => "Ekstazz.Configs";
 
+        
         public override void InstallBindings()
         {
             var (main, backup) = FindConfigServiceProviders();
@@ -87,15 +88,13 @@ namespace Ekstazz.Configs
 
             if (!serviceProviders.Any())
             {
-                throw new Exception(
-                    "No service providers for Ekstazz.Configs. There should be at lease Resource service provider.");
+                throw new Exception("No service providers for Ekstazz.Configs. There should be at lease Resource service provider.");
             }
 
             var providerWithMinPriority = serviceProviders.OrderBy(provider => provider.Priority).First();
             var providerWithMaxPriority = serviceProviders.OrderByDescending(provider => provider.Priority).First();
 
-            Debug.Log(
-                $"RC: Using {providerWithMaxPriority.Name} as main configs provider, {providerWithMinPriority.Name} as backup.");
+            Debug.Log($"RC: Using {providerWithMaxPriority.Name} as main configs provider, {providerWithMinPriority.Name} as backup.");
 
             return (providerWithMaxPriority, providerWithMinPriority);
         }
@@ -132,8 +131,7 @@ namespace Ekstazz.Configs
             var settings = CacheSettings.Load();
             if (settings == null)
             {
-                yield return ModuleVerificationResult.HasError(
-                    "Please, add CacheSettings asset to Resources/Settings via Create menu (Ekstazz/Configs/Cache/Settings)");
+                yield return ModuleVerificationResult.HasError("Please, add CacheSettings asset to Resources/Settings via Create menu (Ekstazz/Configs/Cache/Settings)");
             }
         }
 

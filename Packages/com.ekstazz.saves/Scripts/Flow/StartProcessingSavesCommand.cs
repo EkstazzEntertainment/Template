@@ -11,23 +11,16 @@ namespace Ekstazz.Saves.Flow
     using Zenject;
     using Zenject.Extensions.Commands;
 
+    
     public class StartProcessingSavesCommand : Command
     {
-        [Inject(Id = SaveOrigin.Remote)]
-        internal ISaveIoWorker RemoteWorker { get; set; }
+        [Inject(Id = SaveOrigin.Remote)] internal ISaveIoWorker RemoteWorker { get; set; }
+        [Inject(Id = SaveOrigin.Local)] internal ISaveIoWorker LocalWorker { get; set; }
+        [Inject] internal IAutoConflictSolver AutoConflictSolver { get; set; }
+        [Inject] internal SavePipeline SavePipeline { get; set; }
+        [Inject] internal SaveHolder SaveHolder { get; set; }
 
-        [Inject(Id = SaveOrigin.Local)]
-        internal ISaveIoWorker LocalWorker { get; set; }
-
-        [Inject]
-        internal IAutoConflictSolver AutoConflictSolver { get; set; }
-
-        [Inject]
-        internal SavePipeline SavePipeline { get; set; }
-
-        [Inject]
-        internal SaveHolder SaveHolder { get; set; }
-
+        
         public override async Task Execute()
         {
             Profiler.BeginSample("StartProcessingSaves");
@@ -61,8 +54,7 @@ namespace Ekstazz.Saves.Flow
         [Conditional("DEBUG")]
         private void WriteLoadedSaveAsJson(SaveData result)
         {
-            File.WriteAllText($"{Application.persistentDataPath}/savefile.loaded.json",
-                SavePipeline.ToJson(result.Result));
+            File.WriteAllText($"{Application.persistentDataPath}/savefile.loaded.json", SavePipeline.ToJson(result.Result));
         }
     }
 }

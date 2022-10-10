@@ -3,12 +3,14 @@ namespace Ekstazz.DebugPanel
     using UnityEngine;
     using Zenject;
 
+    
     public class DebugPanelFactoryProxy : IDebugPanelFactory
     {
         private DebugPanel debugPanelPrefab;
         private DebugPanelRoot debugPanelRoot;
         private readonly DebugPanelFactoryNormal proxiedFactory;
 
+        
         public DebugPanelFactoryProxy(DiContainer diContainer)
         {
             debugPanelPrefab = LoadPrefab();

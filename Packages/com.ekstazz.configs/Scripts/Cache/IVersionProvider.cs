@@ -4,23 +4,23 @@ namespace Ekstazz.Configs.Cache
     using UnityEngine;
     using Zenject;
 
+    
     internal interface IVersionProvider
     {
         AppVersion CurrentVersion { get; }
-
         bool IsNewVersion { get; }
-
         AppVersion ParseVersionString(string versionString);
     }
 
+    
     internal class VersionProvider : IVersionProvider, IInitializable
     {
         private const string Key = "_version";
 
         public AppVersion CurrentVersion { get; private set; }
-
         public bool IsNewVersion { get; private set; }
 
+        
         public void Initialize()
         {
             CheckApplicationVersion();
@@ -56,6 +56,7 @@ namespace Ekstazz.Configs.Cache
             var major = parts.Length > 0 ? parts[0] : 0;
             var minor = parts.Length > 1 ? parts[1] : 0;
             var build = parts.Length > 2 ? parts[2] : 0;
+            
             return new AppVersion(major, minor, build);
         }
     }

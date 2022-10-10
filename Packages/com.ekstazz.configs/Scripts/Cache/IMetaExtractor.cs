@@ -3,6 +3,7 @@ namespace Ekstazz.Configs.Cache
     using System;
     using Newtonsoft.Json;
 
+    
     internal interface IMetaExtractor
     {
         Config SplitConfig(string config);
@@ -12,6 +13,7 @@ namespace Ekstazz.Configs.Cache
     {
         private const string MetaProperty = "_meta";
 
+        
         public Config SplitConfig(string config)
         {
             var index = config.IndexOf(MetaProperty, StringComparison.InvariantCulture);

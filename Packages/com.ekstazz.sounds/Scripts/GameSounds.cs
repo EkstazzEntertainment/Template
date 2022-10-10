@@ -4,17 +4,14 @@ namespace Ekstazz.Sounds
     using UnityEngine;
     using Zenject;
 
+    
     public abstract class GameSounds : IInitializable
     {
-        [Inject]
-        public ISounds Sounds { get; set; }
+        [Inject] public ISounds Sounds { get; set; }
+        [Inject] public IVibrations Vibrations { get; set; }
+        [Inject] public SoundSettings SoundSettings { get; set; }
 
-        [Inject]
-        public IVibrations Vibrations { get; set; }
-
-        [Inject]
-        public SoundSettings SoundSettings { get; set; }
-
+        
         public virtual void Initialize()
         {
             var musicVolume = SoundSettings.masterMusicVolume;

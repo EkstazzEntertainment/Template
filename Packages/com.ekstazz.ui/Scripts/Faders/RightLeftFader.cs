@@ -5,17 +5,14 @@ namespace Ekstazz.Ui.Faders
     using JetBrains.Annotations;
     using UnityEngine;
 
+    
     public class RightLeftFader : UiFader
     {
-        [SerializeField]
-        private bool invert;
+        [SerializeField] private bool invert;
+        [SerializeField] private float duration = 0.2f;
+        [SerializeField] private int delta;
 
-        [SerializeField]
-        private float duration = 0.2f;
-
-        [SerializeField]
-        private int delta;
-
+        
         [UsedImplicitly]
         public void Awake()
         {

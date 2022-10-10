@@ -2,6 +2,7 @@ namespace Ekstazz.Currencies
 {
     using System;
 
+    
     public readonly struct Money : IHasAmount
     {
         public Amount Amount => moneyAmount;
@@ -9,6 +10,7 @@ namespace Ekstazz.Currencies
         
         public readonly ICurrencyType Type;
 
+        
         public Money(ICurrencyType type, Amount amount)
         {
             Type = type;

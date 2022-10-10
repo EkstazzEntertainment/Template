@@ -3,6 +3,7 @@ namespace Ekstazz.Utils.Extensions
     using System;
     using UnityEngine;
 
+    
     public static class MathExtensions
     {
         public static float Randomize(this float value, float amount)

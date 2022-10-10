@@ -8,11 +8,11 @@
     [RequireComponent(typeof(Button))]
     public abstract class TapVibrationButton : MonoBehaviour
     {
-        [Inject]
-        public GameSounds GameSounds { get; set; }
+        [Inject] public GameSounds GameSounds { get; set; }
 
         private Button targetButton;
 
+        
         private void Awake()
         {
             targetButton = GetComponent<Button>();

@@ -1,4 +1,4 @@
-namespace TatemGames.Editor.Build
+namespace Ekstazz.Editor.Build
 {
     public interface IPreProjectBuilderAction
     {

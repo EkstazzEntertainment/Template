@@ -4,14 +4,13 @@ namespace Ekstazz.Configs
     using System.Reflection;
     using Zenject;
 
+    
     internal class ConfigPropertyFillerFactory
     {
-        [Inject]
-        public BackedUpConfigApplier ConfigApplier { get; set; }
+        [Inject] public BackedUpConfigApplier ConfigApplier { get; set; }
+        [Inject] public IConfigParser Parser { get; set; }
 
-        [Inject]
-        public IConfigParser Parser { get; set; }
-
+        
         public virtual ConfigPropertyFiller CreateFillerFor(PropertyInfo propertyInfo)
         {
             if (propertyInfo.GetCustomAttribute<ConfigPropertyAttribute>(true) == null)

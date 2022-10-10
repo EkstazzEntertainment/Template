@@ -4,43 +4,25 @@
     using Faders;
     using UnityEngine;
 
+    
     public abstract class Window : UiElement
     {
-        [SerializeField]
-        private bool showBackground;
-
-        /// <summary>
-        /// Called before window starts opening animation
-        /// </summary>
+        [SerializeField] private bool showBackground;
+        
         public event Action Opening;
-
-        /// <summary>
-        /// Means window opening animation ended
-        /// </summary>
         public event Action Opened;
-
-        /// <summary>
-        /// Called before window starts closing animation
-        /// </summary>
         public event Action Closing;
-
-        /// <summary>
-        /// Called after closing animation right before window actual destroying
-        /// </summary>
         public event Action Closed;
 
         public bool ShowBack => showBackground;
-
         public virtual bool CloseOnBackgroundClick => false;
-
         public virtual bool TransparentBack => false;
-
         public virtual bool IsStatic => false;
-
         public virtual bool IsPopup => false;
 
         protected UiFader Fader;
 
+        
         private void Awake()
         {
             Fader = GetComponent<UiFader>() ?? gameObject.AddComponent<DefaultFader>();
@@ -108,16 +90,13 @@
         }
     }
 
-    public abstract class Window<TOptions> : Window
-//        where TViewModel : WindowViewModel
-        where TOptions : class, IWindowOptions, new()
+    public abstract class Window<TOptions> : Window where TOptions : class, IWindowOptions, new()
     {
         protected virtual TOptions DefaultOptions => new TOptions();
-
         protected TOptions Options;
-
         protected virtual bool ViewModelRequired => true;
 
+        
         public override void ShowWithOptions(IWindowOptions options)
         {
             if (!TryGetTypedOptions(options, out var typedOptions))
@@ -135,7 +114,6 @@
 
         protected bool TryGetTypedOptions(IWindowOptions options, out TOptions typedOptions)
         {
-            //every optionized window must provide default options
             if (options == null)
             {
                 options = DefaultOptions;
@@ -144,8 +122,7 @@
             typedOptions = options as TOptions;
             if (typedOptions == null)
             {
-                Debug.LogError(
-                    $"Error while opening window {this}: options must have type {typeof(TOptions)} but have {options.GetType()}");
+                Debug.LogError($"Error while opening window {this}: options must have type {typeof(TOptions)} but have {options.GetType()}");
                 return false;
             }
 

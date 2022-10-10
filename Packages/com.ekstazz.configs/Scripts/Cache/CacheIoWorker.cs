@@ -5,10 +5,12 @@ namespace Ekstazz.Configs.Cache
     using System.Threading.Tasks;
     using UnityEngine;
 
+    
     internal class CacheIoWorker
     {
         private readonly string filename = Path.Combine(Application.persistentDataPath, "cache.dat");
 
+        
         public Task<byte[]> Read()
         {
             if (!File.Exists(filename))

@@ -3,16 +3,15 @@
     using System;
     using System.IO;
     using System.Text;
-    using Ekstazz.Saves.Encryption;
-    using Ekstazz.Saves.Packers;
+    using Encryption;
     using Newtonsoft.Json.Bson;
     using Newtonsoft.Json.Linq;
     using UnityEngine;
 
+    
     internal class SavePacker : ISavePacker
     {
         private static readonly int encKeySize = 128;
-
         private static readonly byte[] Sgs = {0x4F, 0xFB, 0x01, 0x89, 0x57, 0x3C, 0xEF, 0x31};
 
         private static readonly byte[] KeyData =
@@ -25,6 +24,7 @@
 
         private readonly byte[] key;
 
+        
         public SavePacker()
         {
             key = EncryptionHelper.GenerateKey(KeyData, Sgs, encKeySize / 8);
@@ -37,12 +37,10 @@
                 return null;
             }
 
-            //try decrypt
             try
             {
                 using (var ms = new MemoryStream(raw))
                 using (var cStream = EncryptionHelper.Decryptor(key, ms, encKeySize))
-                    // using (var lz4Stream = new LZ4Stream(cStream, LZ4StreamMode.Decompress))
                 using (var br = new BsonReader(cStream, false, DateTimeKind.Utc))
                 {
                     return JObject.Load(br);
@@ -62,7 +60,6 @@
         {
             using (var ms = new MemoryStream())
             using (var cs = EncryptionHelper.Encryptor(key, ms, encKeySize))
-                //    using (var ls = new LZ4Stream(cs, LZ4StreamMode.Compress))
             using (var bs = new BsonWriter(cs))
             {
                 bs.DateTimeKindHandling = DateTimeKind.Utc;

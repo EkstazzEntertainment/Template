@@ -13,3 +13,5 @@
 1.0.5   added pre build actions
 
 1.0.6   Trying to fix iOS release builds.
+
+1.0.7   Beautification.

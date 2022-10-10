@@ -5,13 +5,14 @@ namespace Ekstazz.Sounds
     using Utils;
     using Zenject;
 
+    
     public class Sounds : ISounds, IInitializable
     {
         private const int MinVolume = -80;
 
-        [Inject]
-        public SoundsView SoundsView { get; set; }
+        [Inject] public SoundsView SoundsView { get; set; }
 
+        
         public bool SoundsEnabled
         {
             get => soundsEnabled.Value;
@@ -36,6 +37,7 @@ namespace Ekstazz.Sounds
         private float soundsVolume;
         private float musicVolume;
 
+        
         public void Initialize()
         {
             source = SoundsView.Source;
@@ -81,10 +83,14 @@ namespace Ekstazz.Sounds
 
         public void ApplySettings(bool music, bool sound)
         {
-            musicEnabled =
-                new PlayerPrefsStoredValue<bool>("music", value => mixer.SetFloat("music", value ? musicVolume : MinVolume), music);
-            soundsEnabled =
-                new PlayerPrefsStoredValue<bool>("sound", value => mixer.SetFloat("sound", value ? soundsVolume : MinVolume), sound);
+            musicEnabled = new PlayerPrefsStoredValue<bool>(
+                "music", 
+                value => mixer.SetFloat("music", value ? musicVolume : MinVolume),
+                music);
+            soundsEnabled = new PlayerPrefsStoredValue<bool>(
+                "sound", 
+                value => mixer.SetFloat("sound", value ? soundsVolume : MinVolume),
+                sound);
         }
     }
 }

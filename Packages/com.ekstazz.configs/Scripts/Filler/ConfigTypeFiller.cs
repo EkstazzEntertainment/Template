@@ -6,13 +6,14 @@
     using System.Linq;
     using System.Reflection;
     
+    
     internal class ConfigTypeFiller
     {
         internal ConfigPropertyFillerFactory FillerFactory { get; set; }
-        
         internal PostProcessorsFactory PostProcessorsFactory { get; set; }
         
         private readonly List<PropertyInfo> propertiesList = new List<PropertyInfo>();
+        
         
         public virtual void Fill(object classToBeFilled)
         {

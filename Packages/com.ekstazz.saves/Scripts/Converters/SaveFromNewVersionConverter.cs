@@ -3,6 +3,7 @@
     using System.Linq;
     using Newtonsoft.Json.Linq;
 
+    
     internal class SaveFromNewVersionConverter : IncrementalSaveConverter
     {
         protected override bool CanConvertFromVersion(int version)
@@ -14,8 +15,6 @@
 
         protected override void ConvertInternal(JObject jObject)
         {
-            //throw out all stuff from JObject except header
-            //to prevent from any parsing errors
             var properties = jObject.Properties().ToList();
             foreach (var property in properties)
             {

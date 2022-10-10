@@ -3,16 +3,15 @@ namespace Ekstazz.Debug.DebugOptions
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     public class ToggleOptionView : DebugOptionView<ToggleOption>
     {
-        [SerializeField]
-        private Toggle toggle;
-
-        [SerializeField]
-        private Animator animator;
+        [SerializeField] private Toggle toggle;
+        [SerializeField] private Animator animator;
 
         private static readonly int ToggleAnimation = Animator.StringToHash("Toggle");
 
+        
         public override void ResetToDefault()
         {
             toggle.isOn = Option.Default;

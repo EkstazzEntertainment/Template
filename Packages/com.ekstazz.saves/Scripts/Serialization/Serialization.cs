@@ -4,13 +4,13 @@
     using System.Collections.Generic;
     using UnityEngine;
 
+    
     public static class Serialization
     {
         public static readonly int CurrentVersion;
-        
         public static readonly int MinimumVersion;
-        
         public static readonly List<SerializationTypeMapping> saveGameTypeMapping = new List<SerializationTypeMapping>();
+        
         
         static Serialization()
         {

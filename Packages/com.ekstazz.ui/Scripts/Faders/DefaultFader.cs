@@ -2,6 +2,7 @@
 {
     using System;
 
+    
     public class DefaultFader : UiFader
     {
         public override void FadeIn(Action onFinished = null)

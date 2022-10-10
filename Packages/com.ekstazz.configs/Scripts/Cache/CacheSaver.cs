@@ -10,20 +10,18 @@ namespace Ekstazz.Configs.Cache
     using UnityEngine;
     using Zenject;
 
+    
     internal interface ICacheSaver
     {
         void Save();
-        
         Task Load();
     }
     
     internal class CacheSaver : ICacheSaver
     {
-        [Inject]
-        internal IConfigCache ConfigCache { get; set; }
+        [Inject] internal IConfigCache ConfigCache { get; set; }
+        [Inject] internal CacheIoWorker Worker { get; set; }
         
-        [Inject]
-        internal CacheIoWorker Worker { get; set; }
         
         public void Save()
         {

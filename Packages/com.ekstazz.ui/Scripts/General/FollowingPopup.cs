@@ -4,14 +4,16 @@
     using JetBrains.Annotations;
     using UnityEngine;
 
+    
     public abstract class FollowingPopUp<T> : Window where T : IFolowee
     {
         public T Folowee;
 
         private Canvas canvas;
-
+        
         public override bool IsBlockingDrag => false;
 
+        
         public void Init(T folowee)
         {
             if (folowee?.Anchor == null)
@@ -33,9 +35,9 @@
 
         protected void AnimateShow(float duration, float delay)
         {
-            if (this.Folowee.Anchor == null)
+            if (Folowee.Anchor == null)
             {
-                this.Close();
+                Close();
                 return;
             }
 
@@ -45,7 +47,7 @@
 
         protected void UpdatePosition()
         {
-            if (this.Folowee.Anchor == null)
+            if (Folowee.Anchor == null)
             {
                 return;
             }
@@ -57,8 +59,10 @@
             var y = screenPoint.y / Screen.height;
 
             var canvasRect = canvas.GetComponent<RectTransform>().rect;
-            GetComponent<RectTransform>().localPosition =
-                new Vector3((x - 0.5f) * canvasRect.width, (y - 0.5f) * canvasRect.height, 0);
+            GetComponent<RectTransform>().localPosition = new Vector3(
+                (x - 0.5f) * canvasRect.width, 
+                (y - 0.5f) * canvasRect.height, 
+                0);
         }
 
         [UsedImplicitly]

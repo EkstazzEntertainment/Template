@@ -1,7 +1,7 @@
 {
   "name": "com.ekstazz.saves",
   "displayName": "Ekstazz Saves",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "unity": "2019.3",
   "description": "Data saving and extraction",
   "dependencies": {

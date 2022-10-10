@@ -3,10 +3,12 @@
     using UnityEngine.EventSystems;
     using UnityEngine.UI;
 
+    
     public class OneClickButton : Button
     {
         private bool pressed;
 
+        
         public void ResetButton()
         {
             pressed = false;

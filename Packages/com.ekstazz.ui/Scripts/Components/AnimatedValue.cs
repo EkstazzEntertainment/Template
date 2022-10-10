@@ -5,20 +5,20 @@
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     public class AnimatedValue : MonoBehaviour
     {
         private int amount;
-
         private int curValue;
+        private Text text;
 
         [SerializeField]
         [Range(0.1f, 5)]
         private float speed = 1f;
 
-        private Text text;
-
         public float TimeToAnimate => speed;
 
+        
         public int Value
         {
             get { return amount; }

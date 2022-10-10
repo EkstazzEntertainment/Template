@@ -4,21 +4,20 @@ namespace Ekstazz.Sounds
     using UnityEngine.UI;
     using Zenject;
 
+    
     [RequireComponent(typeof(Toggle))]
     public abstract class SettingsToggle : MonoBehaviour
     {
-        [Inject]
-        public SignalBus SignalBus { get; set; }
+        [Inject] public SignalBus SignalBus { get; set; }
 
-        [SerializeField]
-        private bool inverted = true;
+        [SerializeField] private bool inverted = true;
 
         protected abstract bool InitialState { get; }
-
         protected abstract SettingsType Type { get; }
 
         private Toggle toggle;
 
+        
         private void Awake()
         {
             toggle = GetComponent<Toggle>();

@@ -5,19 +5,17 @@ namespace Ekstazz.Ui.Windows
     using TMPro;
     using UnityEngine;
 
+    
     [WindowMeta("InfoPopUp")]
     public class InfoPopUp : Window<InfoPopUpOptions>
     {
-        [SerializeField]
-        private TMP_Text text;
-
-        [SerializeField, Range(1, 15)]
-        private float lifetime = 3;
+        [SerializeField] private TMP_Text text;
+        [SerializeField, Range(1, 15)] private float lifetime = 3;
 
         protected override InfoPopUpOptions DefaultOptions => new InfoPopUpOptions();
-
         public override bool IsPopup => true;
 
+        
         protected override void Prepare()
         {
             var other = FindObjectsOfType<InfoPopUp>();

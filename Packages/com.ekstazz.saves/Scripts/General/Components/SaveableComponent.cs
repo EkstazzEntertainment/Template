@@ -4,16 +4,15 @@ namespace Ekstazz.Saves.General.Components
     using Core;
     using Zenject;
 
+    
     public abstract class SaveableComponent<T> : IInitializable, ISaveable<T> where T : ISaveComponent, new()
     {
-        [Inject]
-        private ISaveScheduler SaveScheduler { get; set; }
-
-        [Inject]
-        private ISaveablesRegistry SaveablesRegistry { get; set; }
-
+        [Inject] private ISaveScheduler SaveScheduler { get; set; }
+        [Inject] private ISaveablesRegistry SaveablesRegistry { get; set; } 
+        
         public virtual Priority LoadPriority => Priority.Simple;
 
+        
         public virtual void Initialize()
         {
             SaveablesRegistry.Register(this);
@@ -35,9 +34,7 @@ namespace Ekstazz.Saves.General.Components
         }
 
         public virtual void OnPostLoad(TimeSpan timeSinceSave, DateTime utcNow) { }
-
         public abstract T Serialize();
-
         public abstract void Deserialize(T save, DateTime lastSaveTime);
     }
 }

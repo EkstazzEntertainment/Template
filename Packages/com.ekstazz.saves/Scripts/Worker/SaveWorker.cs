@@ -10,24 +10,17 @@ namespace Ekstazz.Saves.Worker
     using UnityEngine;
     using Zenject;
 
+    
     internal class SaveWorker : ISaveWorker
     {
-        [Inject(Id = SaveOrigin.Local)]
-        public ISaveIoWorker LocalWorker { get; set; }
-
-        [Inject(Id = SaveOrigin.Remote)]
-        public ISaveIoWorker RemoteWorker { get; set; }
-
-        [Inject]
-        public ISavePacker SavePacker { get; set; }
-
-        [Inject]
-        public ISaveParser SaveParser { get; set; }
-        
-        [Inject]
-        public SavePipeline SavePipeline { get; set; }
+        [Inject(Id = SaveOrigin.Local)] public ISaveIoWorker LocalWorker { get; set; }
+        [Inject(Id = SaveOrigin.Remote)] public ISaveIoWorker RemoteWorker { get; set; }
+        [Inject] public ISavePacker SavePacker { get; set; }
+        [Inject] public ISaveParser SaveParser { get; set; }
+        [Inject] public SavePipeline SavePipeline { get; set; }
         
         private static readonly object LockingObject = new object();
+        
         
         public async void Write(SaveData saveData)
         {

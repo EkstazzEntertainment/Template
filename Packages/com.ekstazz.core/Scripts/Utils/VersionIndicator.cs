@@ -4,10 +4,11 @@ namespace Ekstazz.Utils
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     public class VersionIndicator : MonoBehaviour
     {
-        [SerializeField]
-        private string prefix = "v";
+        [SerializeField] private string prefix = "v";
+        
         
         private void Awake()
         {

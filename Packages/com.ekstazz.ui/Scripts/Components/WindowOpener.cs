@@ -5,14 +5,15 @@ namespace Ekstazz.Shared.Ui.Components
     using UnityEngine.UI;
     using Zenject;
 
+    
     [RequireComponent(typeof(Button))]
     public abstract class WindowOpener<T> : MonoBehaviour where T : Window
     {
-        [Inject]
-        public UiBuilder UiBuilder { get; set; }
+        [Inject] public UiBuilder UiBuilder { get; set; }
 
         protected virtual IWindowOptions Options { get; }
 
+        
         private void Start()
         {
             GetComponent<Button>().onClick.AddListener(() =>

@@ -4,6 +4,7 @@ namespace Ekstazz.DebugPanel
     using UnityEngine;
     using Zenject;
 
+    
     public interface IDebugPanelFactory
     {
         DebugPanel Create();
@@ -11,17 +12,14 @@ namespace Ekstazz.DebugPanel
     
     public class DebugButton : DebugViewParameter<bool>
     {
-        [Inject]
-        public IDebugPanelFactory DebugPanelFactory { get; set; }
-        
-        [Inject]
-        public DebugButtonVisibilityController DebugButtonVisibilityController { get; set; }
+        [Inject] public IDebugPanelFactory DebugPanelFactory { get; set; }
+        [Inject] public DebugButtonVisibilityController DebugButtonVisibilityController { get; set; }
 
-        [SerializeField]
-        private CanvasGroup canvasGroup;
+        [SerializeField] private CanvasGroup canvasGroup;
         
         private DebugPanel panel;
 
+        
         private void Awake()
         {
 #if !DEBUG

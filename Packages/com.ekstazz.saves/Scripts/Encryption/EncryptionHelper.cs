@@ -3,7 +3,7 @@
     using System.IO;
     using System.Security.Cryptography;
 
-    // Encryption Helper.
+    
     internal static class EncryptionHelper
     {
         // CE - Create Encryptor: Creates AES-128 encryptor, stream and writes IV.

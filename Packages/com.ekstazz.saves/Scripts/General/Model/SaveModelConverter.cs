@@ -7,12 +7,13 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
 
+    
     internal class SaveModelConverter : JsonConverter
     {
         private const string HeaderKey = "header";
-
         private static readonly IDictionary<string, Type> SaveTypes = new Dictionary<string, Type>();
 
+        
         static SaveModelConverter() 
         {
                 var assemblies = AppDomain.CurrentDomain.GetAssemblies();
@@ -50,8 +51,7 @@
             writer.WriteEndObject();
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue,
-            JsonSerializer serializer)
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             var jObject = JObject.Load(reader);
 

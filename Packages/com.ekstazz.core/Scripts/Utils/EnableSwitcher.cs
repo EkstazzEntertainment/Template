@@ -5,20 +5,17 @@
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     [RequireComponent(typeof(Button))]
     public class EnableSwitcher : MonoBehaviour
     {
-        [SerializeField]
-        private string id;
-
-        [SerializeField]
-        private bool onlyInDebug;
-
-        [SerializeField]
-        private List<GameObject> listToSwitch;
+        [SerializeField] private string id;
+        [SerializeField] private bool onlyInDebug;
+        [SerializeField] private List<GameObject> listToSwitch;
 
         private PlayerPrefsStoredValue<bool> isEnabled;
 
+        
         public void Start()
         {
 #if !DEBUG

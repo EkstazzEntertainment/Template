@@ -5,6 +5,7 @@ namespace Ekstazz.Core.Modules
     using System.Linq;
     using System.Reflection;
 
+    
     public class ModuleSearcher
     {
         public List<IModuleInstaller> FindActiveModules()

@@ -2,11 +2,13 @@ namespace Ekstazz.Configs.Cache
 {
     using System;
 
+    
     internal readonly struct AppVersion : IComparable<AppVersion>
     {
         public readonly int major;
         public readonly int minor;
         public readonly int build;
+        
         
         public AppVersion(int major, int minor, int build)
         {

@@ -5,9 +5,9 @@ namespace Ekstazz.Sounds
     public class AdvancedVibrationButton : TapVibrationButton
     {
         [Header("Vibration settings")]
-        [SerializeField]
-        private AdvancedVibration vibrationSetup;
+        [SerializeField] private AdvancedVibration vibrationSetup;
 
+        
         public override void Vibrate()
         {
             GameSounds.Haptic(vibrationSetup);

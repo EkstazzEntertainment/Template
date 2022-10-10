@@ -4,6 +4,7 @@ namespace Ekstazz.Utils.Extensions
     using System.Linq;
     using System.Text.RegularExpressions;
 
+    
     public static class StringExtensions
     {
         public static string CamelCaseToUnderscoredUpper(this string s)

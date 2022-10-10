@@ -1,16 +1,9 @@
 {
   "dependencies": {
-    "com.ekstazz.configs": "1.0.6",
-    "com.ekstazz.core": "1.0.4",
-    "com.ekstazz.currencies": "1.0.2",
-    "com.ekstazz.debugpanel": "1.0.4",
     "com.ekstazz.githubpackageregistry": "git@github.com:EkstazzEntertainment/com.ekstazz.githubpackageregistry.git",
-    "com.ekstazz.saves": "1.0.4",
-    "com.ekstazz.sounds": "1.0.2",
     "com.ekstazz.third-parties.dotween": "1.0.2",
     "com.ekstazz.third-parties.vibrations": "1.0.3",
     "com.ekstazz.third-parties.zenject": "1.0.3",
-    "com.ekstazz.ui": "1.0.8",
     "com.google.external-dependency-manager": "1.2.172",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
@@ -57,7 +50,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.ekstazz.builder": "1.0.6"
+    "com.ekstazz.builder": "1.0.7",
+    "com.ekstazz.configs": "1.0.7",
+    "com.ekstazz.core": "1.0.5",
+    "com.ekstazz.currencies": "1.0.3",
+    "com.ekstazz.debugpanel": "1.0.5",
+    "com.ekstazz.saves": "1.0.5",
+    "com.ekstazz.sounds": "1.0.3",
+    "com.ekstazz.ui": "1.0.9"
   },
   "enableLockFile": false,
   "registry": null,

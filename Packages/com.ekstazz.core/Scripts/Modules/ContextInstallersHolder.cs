@@ -3,11 +3,13 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    
     public class ContextInstallersHolder
     {
         public IEnumerable<IModuleInitializer> ModuleInitializers => initializers.ToList();
         
         private readonly List<IModuleInitializer> initializers;
+        
         
         public ContextInstallersHolder(List<IModuleInstaller> addons)
         {

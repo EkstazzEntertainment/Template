@@ -4,20 +4,16 @@ namespace Ekstazz.DebugPanel
     using UnityEngine;
     using Zenject;
 
+    
     public class DebugPage : MonoBehaviour
     {
-        [Inject]
-        private DiContainer DiContainer { get; set; }
+        [Inject] private DiContainer DiContainer { get; set; }
         
-        [SerializeField]
-        private DebugComponentHeader headerPrefab;
+        [SerializeField] private DebugComponentHeader headerPrefab;
+        [SerializeField] private GameObject separationLine;
+        [SerializeField] private Transform content;
 
-        [SerializeField]
-        private GameObject separationLine;
-
-        [SerializeField]
-        private Transform content;
-
+        
         public void AddPanelComponents(List<DebugComponent> components)
         {
             DeletePreviousComponents();

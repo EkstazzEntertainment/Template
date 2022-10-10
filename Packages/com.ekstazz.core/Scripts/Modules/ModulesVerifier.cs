@@ -3,13 +3,13 @@ namespace Ekstazz.Core.Modules
     using System.Collections.Generic;
     using System.Linq;
 
+    
     public class ModulesVerifier
     {
-        public Dictionary<string, ModuleVerificationResult> ModuleVerification { get; } =
-            new Dictionary<string, ModuleVerificationResult>();
-
+        public Dictionary<string, ModuleVerificationResult> ModuleVerification { get; } = new Dictionary<string, ModuleVerificationResult>();
         public bool AreModulesValid { get; set; }
 
+        
         public bool Verify(List<IModuleInstaller> modules)
         {
             AreModulesValid = true;

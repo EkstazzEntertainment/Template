@@ -5,14 +5,12 @@ namespace Ekstazz.Saves
     using System.Linq;
     using UnityEngine;
 
+    
     internal abstract class SaveComponentInjector
     {
         public abstract bool CanWorkWith(ISaveable persistent);
-
         public abstract bool TryInject(ISaveComponent save, ISaveable persistent, DateTime lastSaveTime);
-
         public abstract ISaveComponent GetSaveToInject(List<ISaveComponent> saves);
-
         public abstract ISaveComponent ExtractSave(ISaveable persistent);
     }
 

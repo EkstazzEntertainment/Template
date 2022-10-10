@@ -5,6 +5,7 @@ namespace Ekstazz.DebugPanel
         private TInstance instance;
         private TValue value;
 
+        
         public void SetInstance(TInstance instance)
         {
             this.instance = instance;

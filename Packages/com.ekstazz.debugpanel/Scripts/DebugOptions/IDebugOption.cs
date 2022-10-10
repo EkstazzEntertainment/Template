@@ -4,6 +4,5 @@ namespace Ekstazz.Debug.DebugOptions
     {
         public void Init();
         public string Name { get; set; }
-        
     }
 }

@@ -5,15 +5,14 @@ namespace Ekstazz.Debug
     using UnityEngine;
     using UnityEngine.UI;
 
+    
     public class NamedButton : MonoBehaviour
     {
-        [SerializeField]
-        private TMP_Text namePlaceholder;
-        
-        [SerializeField]
-        private Button button;
+        [SerializeField] private TMP_Text namePlaceholder;
+        [SerializeField] private Button button;
 
         private Action clickCallback;
+        
         
         public void InitWith(string buttonName, Action callback)
         {
