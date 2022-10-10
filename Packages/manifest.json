@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.ekstazz.builder": "1.0.5",
     "com.ekstazz.configs": "1.0.6",
     "com.ekstazz.core": "1.0.4",
     "com.ekstazz.currencies": "1.0.2",
@@ -57,14 +56,13 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.ekstazz.builder": "1.0.6"
   },
   "enableLockFile": false,
   "registry": null,
   "resolutionStrategy": "lowest",
   "testables": null,
   "useSatSolver": false,
-  "scopedRegistries": [
-
-  ]
+  "scopedRegistries": []
 }

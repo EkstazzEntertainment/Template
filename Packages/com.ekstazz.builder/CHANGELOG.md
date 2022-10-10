@@ -11,3 +11,5 @@
 1.0.4   some fixes.
 
 1.0.5   added pre build actions
+
+1.0.6   Trying to fix iOS release builds.
