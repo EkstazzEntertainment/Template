@@ -65,12 +65,6 @@
   "testables": null,
   "useSatSolver": false,
   "scopedRegistries": [
-    {
-      "name": "Ekstazz",
-      "url": "https://upm.Ekstazz.com",
-      "scopes": [
-        "jillejr"
-      ]
-    }
+
   ]
 }
