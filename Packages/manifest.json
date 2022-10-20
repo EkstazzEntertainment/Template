@@ -54,10 +54,10 @@
     "com.ekstazz.configs": "1.0.7",
     "com.ekstazz.core": "1.0.5",
     "com.ekstazz.currencies": "1.0.3",
-    "com.ekstazz.debugpanel": "1.0.5",
     "com.ekstazz.saves": "1.0.5",
     "com.ekstazz.sounds": "1.0.3",
-    "com.ekstazz.ui": "1.0.9"
+    "com.ekstazz.ui": "1.0.9",
+    "com.ekstazz.debugpanel": "1.0.6"
   },
   "enableLockFile": false,
   "registry": null,

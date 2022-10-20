@@ -7,3 +7,5 @@
 1.0.4   Renaming.
 
 1.0.5   Beautification.
+
+1.0.6   fixed UI layer
